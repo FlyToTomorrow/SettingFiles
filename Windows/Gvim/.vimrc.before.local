@@ -1,0 +1,23 @@
+"set shell"
+if !WINDOWS()
+    "set shell=/home/zhifei/App/zsh/bin/zsh
+    set shell=zsh
+endif
+
+"Bundle groups"
+let g:spf13_bundle_groups=['general', 'writing', 'neocomplete', 'programming', 'python', 'misc',]
+
+" air line "
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_alt_sep = '|'
+
+"nerdtree-tabs"
+"Open NERDTree on new tab creation (if NERDTree was globally opened by :NERDTreeTabsToggle)"
+let g:nerdtree_tabs_open_on_new_tab = 1 
+"Close current tab if there is only one window in it and it's NERDTree"
+let g:nerdtree_tabs_autoclose = 1
+"Automatically find and select currently opened file in NERDTree.
+let g:nerdtree_tabs_autofind = 1
+
+
+let g:syntastic_python_python_exec = 'python' 

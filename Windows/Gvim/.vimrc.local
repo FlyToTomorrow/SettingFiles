@@ -1,0 +1,69 @@
+"-----------Setting--------------"
+set background=light
+colorscheme solarized
+"window size"
+set lines=75 columns=120
+set guifont=Fira\ Mono:h11
+
+set wrap linebreak nolist
+
+set nospell
+map <F4> :setlocal spell! spelllang=en_us<CR>
+
+map gn :bn<cr>
+map gp :bp<cr> 
+
+
+"-----------New Bundles-----------"
+"Bundle 'SirVer/ultisnips'
+Bundle 'plasticboy/vim-markdown'
+"Bundle 'christoomey/vim-tmux-navigator'
+"Bundle 'jistr/vim-nerdtree-tabs'
+Bundle 'vim-scripts/TaskList.vim'
+Bundle 'fisadev/vim-ctrlp-cmdpalette'
+
+"-----------Plugin setting-----------"
+"Wordy"
+noremap <silent> <F8> :<C-u>NextWordy<cr>
+xnoremap <silent> <F8> :<C-u>NextWordy<cr>
+inoremap <silent> <F8> <C-o>:NextWordy<cr>
+
+"Python mode"
+let g:pymode_python = 'python3'
+let g:pymode_motion = 1
+let g:pymode_run = 1
+"Binds keys to run python code "
+let g:pymode_run_bind = '<F5>'
+"Enable breakpoint functionality 
+let g:pymode_breakpoint = 1
+let g:pymode_breakpoint_bind = '<leader>b'
+let g:pymode_rope_goto_definition_bind = '<leader>gd'
+
+
+""vim-tmux-navigator"
+"let g:tmux_navigator_no_mappings = 1
+"nnoremap <silent> <leader> <c-h> :TmuxNavigateLeft<cr>
+"nnoremap <silent> <leader> <c-j> :TmuxNavigateDown<cr>
+"nnoremap <silent> <leader> <c-k> :TmuxNavigateUp<cr>
+"nnoremap <silent> <leader> <c-l> :TmuxNavigateRight<cr>
+
+"Nerdtree"
+let g:nerdtree_tabs_open_on_gui_startup=1
+let g:nerdtree_tabs_open_on_new_tab=1
+let g:nerdtree_tabs_autoclose=1
+
+"ctrlp"
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_root_directory = ["D:/Program_Data/", "D:/Dropbox/"]
+":CtrlPDir "D:/Program_Data/"
+
+"vim-ctrlp-cmdpalette"
+let g:ctrlp_cmdpalette_execute=1
+noremap <C-p> :CtrlPCmdPalette<CR>
+noremap <C-q> :CtrlPCmdPalette<CR>
+
+"vim-markdown"
+let g:vim_markdown_folding_disabled = 1
+
+"pandoc"
+au BufEnter *.md map <F5> :!pandoc %  -o %:r.html --template bootstrap_template.html --css "C:\Users\zwangbc\AppData\Roaming\pandoc\marked\bootstrap_template.css" --self-contained --toc --toc-depth 2
