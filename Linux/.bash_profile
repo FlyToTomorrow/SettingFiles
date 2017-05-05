@@ -1,9 +1,9 @@
-# .bashrc
+# .bash_profile
 
-# Source global definitions
-if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
-fi
+# Get the aliases and functions
+#if [ -f ~/.bashrc ]; then
+	#. ~/.bashrc
+#fi
 
 export LD_LIBRARY_PATH=/home/zhifei/App/lib:$LD_LIBRARY_PATH
 

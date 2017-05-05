@@ -1,15 +1,30 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-PATH=/home/zhifei/App/anaconda2/bin/:$PATH
-PATH=/home/zhifei/App/anaconda3/bin/:$PATH
+
+# PATH=/home/zhifei/App/Qt/5.8/gcc_64/bin:$PATH
+PATH=/home/zhifei/App/w3m/usr/bin:$PATH
+# PATH=/home/zhifei/App/anaconda3/bin/:$PATH
 PATH=/home/zhifei/App/bin/:$PATH
-PATH=/home/zhifei/App/jre1.8.0_91/bin:$PATH
-PATH=/home/zhifei/App/gcc62/bin:$PATH
-PATH=/home/zhifei/App/zsh52/bin:$PATH
+PATH=/home/zhifei/App/netbeans/bin/:$PATH
+PATH=/home/zhifei/App/jre1.8.0_131/bin:$PATH
+PATH=/home/zhifei/App/gcc63/bin:$PATH
+PATH=/home/zhifei/App/zsh/bin:$PATH
+PATH=/home/zhifei/App/TexLive/bin/x86_64-linux:$PATH
+PATH=/home/zhifei/App/chrome/usr/bin:$PATH
+PATH=/home/zhifei/App/pycharm/bin:$PATH
+PATH=/home/zhifei/App/zotero:$PATH
+PATH=/home/zhifei/App/MATLAB/R2016b/bin:$PATH
+PATH=/home/zhifei/App/eclipse/cpp-neon/eclipse/:$PATH
+PATH=/home/zhifei/App/lyn/bin:$PATH
+PATH=/home/zhifei/App/qt/bin:$PATH
+PATH=/home/zhifei/App/w3m/usr/bin:$PATH
+PATH=/home/zhifei/App/llvm/bin:$PATH
 export PATH
 
+export CXX=/home/zhifei/App/gcc63/bin/g++
+export CC=/home/zhifei/App/gcc63/bin/gcc
+
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/zhifei/.oh-my-zsh
+export ZSH=/home/zhifei/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -90,27 +105,54 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ls="ls -l --color=always"
+
+# ======================= customed alias
+alias cloc="/home/zhifei/App/cloc/cloc"
+alias rssowl="/home/zhifei/App/rssowl/rssowl"
+alias zotero="/home/zhifei/App/zotero/zotero"
+alias vscode="/home/zhifei/App/vscode/code"
+alias a="/home/zhifei/App/bin/aria2c"
+alias syncthing="/home/zhifei/App/syncthing/syncthing"
+alias chrome="/home/zhifei/App/chrome/opt/google/chrome/google-chrome --no-sandbox --always-authorize-plugins --allow-outdated-plugins %U"
+alias ls="ls -lh --color=always"
 alias lm="ls -l --color=always|more"
 alias vim="/home/zhifei/App/bin/vim"
-alias p3="/home/zhifei/App/anaconda3/bin/python3"
-alias p2="/home/zhifei/App/anaconda2/bin/python2.7"
-alias pycharm="/home/zhifei/App/pycharm-community-2016.1.4/bin/pycharm.sh"
+alias RStudio="/home/zhifei/App/RStudio/lib/rstudio/bin/rstudio"
+alias matlab="/home/zhifei/App/MATLAB/R2016b/bin/matlab"
+alias pycharm="/home/zhifei/App/pycharm/bin/pycharm.sh"
+alias mode="/opt/lumerical/mode/bin/mode-solutions"
+alias fdtd="/opt/lumerical/fdtd/bin/fdtd-solutions"
+alias interconnect="/opt/lumerical/interconnect/bin/interconnect"
 alias tmux="tmux -2"
+alias ta="tmux -2 a"
 alias grep="grep --color=auto"
-eval "$(thefuck --alias)"
-eval "$(thefuck --alias FUCK)"
+# eval "$(thefuck --alias)"
+# eval "$(thefuck --alias FUCK)"
+# ======================= 
 
 # Other variables
 setterm -regtabs 4
-export TERM=xterm-256color
-export LD_LIBRARY_PATH=/home/zhifei/App/lib:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=/home/zhifei/App/gcc62/lib:/home/zhifei/App/gcc62/lib64:$LD_LIBRARY_PATH
-#export LD_LIBRARY_PATH=/home/zhifei/App/anaconda3/lib:/home/zhifei/App/anaconda3/lib64:$LD_LIBRARY_PATH
-#LD_LIBRARY_PATH=:$LD_LIBRARY_PATH
+[ -z "$TMUX" ] && export TERM=xterm-256color
+
+LD_LIBRARY_PATH=/home/zhifei/App/lib:/home/zhifei/App/lib64:$LD_LIBRARY_PATH
+LD_LIBRARY_PATH=/home/zhifei/App/qt4/lib:/home/zhifei/App/qt4/lib64:$LD_LIBRARY_PATH
+LD_LIBRARY_PATH=/home/zhifei/App/gcc63/lib:/home/zhifei/App/gcc63/lib64:$LD_LIBRARY_PATH
+# LD_LIBRARY_PATH=/home/zhifei/App/qt/lib:/home/zhifei/App/qt/lib64:$LD_LIBRARY_PATH
+LD_LIBRARY_PATH=/home/zhifei/App/Qt/5.8/gcc_64/lib:/home/zhifei/App/Qt/5.8/gcc_64/lib64:$LD_LIBRARY_PATH
+LD_LIBRARY_PATH=/home/zhifei/App/llvm/lib:/home/zhifei/App/llvm/lib64:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH
+
+# export PYTHON_INCLUDE_DIR=/home/zhifei/App/anaconda3/include/python3.6m
+# export PYTHON_LIBRARY=/home/zhifei/App/anaconda3/lib
+# export PYTHONPATH=/home/zhifei/App/anaconda3/lib/python3.6/site-packages
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# GTK_IM_MODULE=gtk-im-context-simple
 
 export EDITOR=vim
-export BASHHOME=/home/zhifei/App/bash4/bin/
+export MATLABPATH=/home/zhifei/Matlab/Add_on/export_fig/:/home/zhifei/Matlab/Add_on/CustomizedFunctions/
 
 # hstr related
 # add this configuration to ~/.bashrc
@@ -125,4 +167,7 @@ export HISTFILE=~/.zsh_history
 bindkey -s "\C-r" "\C-ahh -- \C-j"
 
 # fasd related
-eval "$(fasd --init auto)"
+# eval "$(fasd --init auto)"
+
+
+plugins=( git bundler zsh-syntax-highlighting)

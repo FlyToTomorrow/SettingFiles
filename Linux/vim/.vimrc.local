@@ -1,0 +1,11 @@
+"-----------New Bundles-----------"
+Bundle 'plasticboy/vim-markdown'
+Bundle 'davidhalter/jedi-vim'
+
+"-----------Plugin setting-----------"
+"Wordy"
+noremap <silent> <F8> :<C-u>NextWordy<cr>
+xnoremap <silent> <F8> :<C-u>NextWordy<cr>
+inoremap <silent> <F8> <C-o>:NextWordy<cr>
+
+
