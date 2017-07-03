@@ -1,0 +1,152 @@
+#include "MDIVIEW.H"
+#include <windows.h>
+
+#define _FILEFLAGS 0
+#define _FILETYPE VFT_APP
+#define _FILESUBTYPE 0
+#ifndef SLNRC
+#ifdef _DEBUG
+#ifdef WIN64
+#define S_COMMENT "X64Debug\000"
+#elif WIN32
+#define S_COMMENT "X86Debug\000"
+#else
+#define S_COMMENT "Debug\000"
+#endif  //WIN64
+#else
+#ifdef WIN64
+#define S_COMMENT "X64Release\000"
+#elif WIN32
+#define S_COMMENT "X86Release\000"
+#else
+#define S_COMMENT "Debug\000"
+#endif  //WIN64
+#endif //_DEBUG
+#endif //SLNRC
+#define S_FILEDESCRIPTION "OIVT Sample Application\000"
+#define S_INTERNALNAME "MDIView\000"
+#define S_ORIGINALFILENAME "MDIView.exe\000"
+#include <sccver.rc>
+
+
+IDBLANDFRAME  ICON  "mdiframe.ico"   /* main icon              */
+
+/*  frame window menu */
+
+IDBLANDMENU  MENU  LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    POPUP   "&File"
+    BEGIN
+      MENUITEM    "&Open",      IDM_FILEOPEN
+      MENUITEM    "&Close",     IDM_FILECLOSE
+      MENUITEM    SEPARATOR
+      MENUITEM    "E&xit",     IDM_FILEEXIT
+    END
+    POPUP   "&Edit"
+    BEGIN
+      MENUITEM    "&Copy",     IDM_EDITCOPY
+      MENUITEM    "Select &All",     IDM_EDITSELECTALL
+      MENUITEM    SEPARATOR
+      MENUITEM    "&Search",     IDM_EDITSEARCH
+      MENUITEM    "Search &Next",     IDM_EDITSEARCHNEXT
+      MENUITEM    "Search &Prev",     IDM_EDITSEARCHPREV
+    END
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "&Auto Sizing",                IDM_OPTIONSAUTOSIZE
+        MENUITEM SEPARATOR
+        POPUP "&Document Encoding"
+        BEGIN
+            MENUITEM "Latin 1 (Default)",           IDM_OPTIONSENCLATIN1
+            MENUITEM "Central European (DOS Latin 2)",  IDM_OPTIONSENCLATIN2
+            MENUITEM "Central European (ANSI 1250)",  IDM_OPTIONSENCCENTRALEU1250
+                MENUITEM SEPARATOR
+            MENUITEM "Japanese (ShiftJIS)",           IDM_OPTIONSENCJAPANESESJIS
+            MENUITEM "Japanese (EUC)",                IDM_OPTIONSENCJAPANESEEUC
+            MENUITEM "Japanese (JIS)",                IDM_OPTIONSENCJAPANESEJIS
+                MENUITEM SEPARATOR
+            MENUITEM "Chinese (Big 5)",               IDM_OPTIONSENCCHINESEBIG5
+            MENUITEM "Chinese (EUC)",                 IDM_OPTIONSENCCHINESEEUC
+            MENUITEM "Chinese (GB)",                  IDM_OPTIONSENCCHINESEGB
+                MENUITEM SEPARATOR
+            MENUITEM "Korean",                      IDM_OPTIONSENCKOREAN
+                MENUITEM SEPARATOR
+            MENUITEM "Cyrillic (ANSI 1251)",        IDM_OPTIONSENCCYRILLIC1251
+            MENUITEM "Cyrillic (KOI8-R)",           IDM_OPTIONSENCCYRILLICKOI8
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Enable File &Access Dialog",   IDM_OPTIONSFILEACCESSDIALOG
+        MENUITEM SEPARATOR
+        MENUITEM "Single Click Archive &View",      IDM_OPTIONSARCHIVESINGLE
+        MENUITEM "&Set Archive Selection..."        IDM_OPTIONSSETSELECT
+    END
+    POPUP   "&Window"
+    BEGIN
+      MENUITEM    "&Tile",         IDM_WINDOWTILE
+      MENUITEM    "&Cascade",      IDM_WINDOWCASCADE
+      MENUITEM    "Arrange &Icons",IDM_WINDOWICONS
+      MENUITEM    "Close &All",    IDM_WINDOWCLOSEALL
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About...",                   IDM_HELPABOUT
+    END
+END
+
+
+STRINGTABLE  LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    IDS_UNTITLED  "Untitled"
+    IDS_APPNAME   "MDIView"
+    IDS_ARCSELERR "Please use numbers greater than 0"
+    IDS_NOTARCHIVE "Sorry, selected file is not an archive."
+END
+
+
+HELP_ABOUTBOX DIALOG DISCARDABLE  14, 22, 358, 195
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "About MdiView"
+FONT 8, "Courier New"
+BEGIN
+    ICON            IDBLANDFRAME,611,11,17,18,20
+    LTEXT           "",HELP_ABOUTTOPBOX,40,10,163,33
+    GROUPBOX        "",617,4,48,341,138
+    LTEXT           "",HELP_ABOUTBOXCOL1,13,65,160,115
+    LTEXT           "",HELP_ABOUTBOXCOL2,180,65,160,115
+    DEFPUSHBUTTON   "OK",ID_OK,315,15,32,14
+END
+
+IDD_SETSELECT DIALOG DISCARDABLE  0, 0, 184, 68
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Set Selection"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,37,47,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,95,47,50,14
+    LTEXT           "Selection anchor node:",-1,33,10,74,8
+    LTEXT           "Selection end node:",-1,33,28,64,8
+    EDITTEXT        IDC_EDTSELECT1,109,7,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDTSELECT2,109,25,40,14,ES_AUTOHSCROLL
+END
+
+IDD_FILEACCESSDIALOG DIALOG DISCARDABLE  46, 32, 211, 82
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "File Access Dialog"
+FONT 8, "Arial Unicode MS"
+BEGIN
+    LTEXT           "Enter password:",IDS_INPUTPASSWORD,25,16,72,12
+    EDITTEXT        IDS_PASSWORD,92,16,82,12,ES_PASSWORD | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "&OK",IDOK,46,54,40,14,WS_GROUP
+    PUSHBUTTON      "&Cancel",IDCANCEL,97,54,40,14
+END
+
+IDD_NOTESACCESSDIALOG DIALOG DISCARDABLE  46, 32, 211, 82
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "Notes Access Dialog"
+FONT 8, "Arial Unicode MS"
+BEGIN
+    LTEXT           "Enter path to Notes ID file:",IDS_INPUTNOTESID,5,16,72,12
+    EDITTEXT        IDS_NOTESID,92,16,82,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "&OK",IDOK,46,54,40,14,WS_GROUP
+    PUSHBUTTON      "&Cancel",IDCANCEL,97,54,40,14
+END

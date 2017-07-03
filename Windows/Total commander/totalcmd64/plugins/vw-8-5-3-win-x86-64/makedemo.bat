@@ -1,0 +1,1 @@
+copy redist\* sdk\demo

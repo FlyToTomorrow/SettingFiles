@@ -1,0 +1,133 @@
+#include "drawpage.h"
+#include <windows.h>
+
+#define _FILEFLAGS 0
+#define _FILETYPE VFT_APP
+#define _FILESUBTYPE 0
+#ifndef SLNRC
+#ifdef _DEBUG
+#ifdef WIN64
+#define S_COMMENT "X64Debug\000"
+#elif WIN32
+#define S_COMMENT "X86Debug\000"
+#else
+#define S_COMMENT "Debug\000"
+#endif  //WIN64
+#else
+#ifdef WIN64
+#define S_COMMENT "X64Release\000"
+#elif WIN32
+#define S_COMMENT "X86Release\000"
+#else
+#define S_COMMENT "Debug\000"
+#endif  //WIN64
+#endif //_DEBUG
+#endif //SLNRC
+#define S_FILEDESCRIPTION "OIVT Sample Application\000"
+#define S_INTERNALNAME "DrawPage\000"
+#define S_ORIGINALFILENAME "DrawPage.exe\000"
+#include <sccver.rc>
+
+
+SCC_ICON                ICON    DISCARDABLE     "drawpage.ico"
+
+SCC_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open...\tCtrl+O",                                    MENU_FILE_OPEN
+        MENUITEM "&Close",                                              MENU_FILE_CLOSE
+        MENUITEM SEPARATOR
+        MENUITEM "&Prev page\tCtrl+P",                                  MENU_FILE_PREVPAGE
+        MENUITEM "&Next page\tCtrl+N",                                  MENU_FILE_NEXTPAGE
+        MENUITEM "&Goto page...\tCtrl+G",                               MENU_FILE_GOTOPAGE
+        MENUITEM "Save page at 300 dpi mono...",           MENU_FILE_WRITE1
+        MENUITEM "Save page at 72 dpi 16 color...",        MENU_FILE_WRITE4
+        MENUITEM "Save page at 72 dpi 256 color...",       MENU_FILE_WRITE8
+        MENUITEM "Save page at 72 dpi true color...",      MENU_FILE_WRITE24
+        MENUITEM "Save page as a Windows Metafile...",     MENU_FILE_WRITEWMF
+        MENUITEM "Save page as a Windows EnhMetafile...",  MENU_FILE_WRITEEMF
+		MENUITEM SEPARATOR
+		MENUITEM "P&rint...",                                           MENU_FILE_PRINTDP
+		MENUITEM SEPARATOR
+		MENUITEM "E&xit",                                               MENU_FILE_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Cut\tCtrl+X",                MENU_EDIT_CUT
+        MENUITEM "C&opy\tCtrl+C",               MENU_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              MENU_EDIT_PASTE
+    END
+    POPUP "&Anno"
+    BEGIN
+        MENUITEM "&Clear\tCtrl+E",              MENU_ANNO_CLEAR
+        MENUITEM "&Highlight\tCtrl+H",          MENU_ANNO_HIGHLIGHT
+        MENUITEM "&Foreground Color\tCtrl+F",   MENU_ANNO_FORECOLOR
+        MENUITEM "&Background Color\tCtrl+B",   MENU_ANNO_BACKCOLOR
+    END
+    POPUP "&Info"
+    BEGIN
+        MENUITEM "&Page Info",                  MENU_INFO_PAGEINFO
+	MENUITEM "Page &Count",                 MENU_INFO_PAGECOUNT
+    END
+	POPUP "&Options"
+	BEGIN
+		MENUITEM "No Blank Cells in Drawpage"	MENU_OPTIONS_FILTERNOBLANK
+		MENUITEM "Display HTML/EMAIL document as a single page"	MENU_OPTIONS_SINGLEPAGEHTMLEMAIL
+	END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "About...",                    MENU_HELP_ABOUT
+    END
+END
+
+SCC_MENU ACCELERATORS
+BEGIN
+  "^X",         MENU_EDIT_CUT
+  "^C",         MENU_EDIT_COPY
+  "^V",         MENU_EDIT_PASTE
+  "^O",         MENU_FILE_OPEN
+  "^N",         MENU_FILE_NEXTPAGE
+  "^P",         MENU_FILE_PREVPAGE
+  "^G",         MENU_FILE_GOTOPAGE
+  "^E",         MENU_ANNO_CLEAR
+  "^H",         MENU_ANNO_HIGHLIGHT
+  "^F",         MENU_ANNO_FORECOLOR
+  "^B",         MENU_ANNO_BACKCOLOR
+END
+
+HELP_ABOUTBOX DIALOG DISCARDABLE  34, 22, 187, 105
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "About Page"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            "SCC_ICON",611,11,17,18,20
+    LTEXT           "",HELP_ABOUTBOXVERINFO,40,10,139,42
+    DEFPUSHBUTTON   "OK",IDOK,75,75,32,14,WS_GROUP
+END
+
+GOTO_DIALOG DIALOG DISCARDABLE  0, 0, 186, 90
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Go To..."
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_PAGENUM,88,28,53,12,ES_NUMBER
+    DEFPUSHBUTTON   "OK",IDOK,21,69,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,116,69,50,14
+    RTEXT           "Go To Page:",IDC_STATIC,38,30,47,8
+    CTEXT           "Static",IDC_RANGE,88,44,53,14,SS_CENTERIMAGE
+END
+
+COLOR_DIALOG DIALOG DISCARDABLE  0, 0, 178, 107
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION ""
+FONT 8, "MS Sans Serif"
+BEGIN
+    COMBOBOX         IDC_COLORNAME,72,14,80,90,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Color Chooser",IDC_CHOOSER,72,50,80,13
+    DEFPUSHBUTTON   "OK",IDOK,23,86,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,104,86,50,14
+    RTEXT           "By Name:",IDC_STATIC,31,15,38,10,SS_CENTERIMAGE
+END
+
+

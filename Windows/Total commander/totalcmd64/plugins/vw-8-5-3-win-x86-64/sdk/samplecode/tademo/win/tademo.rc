@@ -1,0 +1,85 @@
+#include "tademo.h"
+
+#define _FILEFLAGS 0
+#define _FILETYPE VFT_APP
+#define _FILESUBTYPE 0
+#ifndef SLNRC
+#ifdef _DEBUG
+#ifdef WIN64
+#define S_COMMENT "X64Debug\000"
+#elif WIN32
+#define S_COMMENT "X86Debug\000"
+#else
+#define S_COMMENT "Debug\000"
+#endif  //WIN64
+#else
+#ifdef WIN64
+#define S_COMMENT "X64Release\000"
+#elif WIN32
+#define S_COMMENT "X86Release\000"
+#else
+#define S_COMMENT "Debug\000"
+#endif  //WIN64
+#endif //_DEBUG
+#endif //SLNRC
+#define S_FILEDESCRIPTION "OIVT Sample Application\000"
+#define S_INTERNALNAME "TADemo\000"
+#define S_ORIGINALFILENAME "TADemo.exe\000"
+#include <sccver.rc>
+
+
+
+TADEMO                  ICON    DISCARDABLE     "TADEMO.ICO"
+
+TADEMOMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open...",                    IDM_OPEN
+        MENUITEM "&Close",                      IDM_CLOSE, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Save text to C:\\TADEMO.TXT", IDM_SAVETEXTAS, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&About...",                   IDM_ABOUT
+    END
+    POPUP "&Read"
+    BEGIN
+        MENUITEM "&First Block",                IDM_FIRSTBLOCK, GRAYED
+        MENUITEM "&Next Block",                 IDM_NEXTBLOCK, GRAYED
+    END
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "&Set Buffer Size...",         IDM_BUFSIZE
+    END
+	POPUP "&Archive"
+	BEGIN
+		MENUITEM "Record &Count",	IDM_RECORDCOUNT
+		MENUITEM "Record &Info",	IDM_RECORDINFO
+		MENUITEM "Record &Open",	IDM_RECORDOPEN
+		MENUITEM "Record C&lose",	IDM_RECORDCLOSE, GRAYED
+	END
+END
+
+SIZEDLG DIALOG DISCARDABLE  130, 53, 104, 47
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "Enter buffer size..."
+FONT 8, "Helv"
+BEGIN
+    EDITTEXT        DLG_NUMEDIT,8,9,90,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,28,40,14
+    PUSHBUTTON      "Cancel",IDCANCEL,58,28,40,14
+END
+
+ABOUTDLG DIALOG DISCARDABLE  43, 42, 161, 90
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "About..."
+FONT 8, "Helv"
+BEGIN
+    CTEXT           "A demonstration of Outside In's Text Access technology under Windows",
+                    101,10,41,140,19
+    CTEXT           "",HELP_ABOUTBOXVERINFO,1,58,160,8
+    CTEXT           "TADEMO.EXE",102,36,6,87,9
+    ICON            "TADEMO",103,71,16,18,20
+    DEFPUSHBUTTON   "OK",IDOK,60,70,40,14
+END
+

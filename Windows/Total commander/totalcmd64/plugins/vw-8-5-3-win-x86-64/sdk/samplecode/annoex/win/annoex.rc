@@ -1,0 +1,224 @@
+#include "annoex.h"
+#include <winuser.h>
+
+#define _FILEFLAGS 0
+#define _FILETYPE VFT_APP
+#define _FILESUBTYPE 0
+#ifndef SLNRC
+#ifdef _DEBUG
+#ifdef WIN64
+#define S_COMMENT "X64Debug\000"
+#elif WIN32
+#define S_COMMENT "X86Debug\000"
+#else
+#define S_COMMENT "Debug\000"
+#endif  //WIN64
+#else
+#ifdef WIN64
+#define S_COMMENT "X64Release\000"
+#elif WIN32
+#define S_COMMENT "X86Release\000"
+#else
+#define S_COMMENT "Debug\000"
+#endif  //WIN64
+#endif //_DEBUG
+#endif //SLNRC
+#define S_FILEDESCRIPTION "OIVT Sample Application\000"
+#define S_INTERNALNAME "Annoex\000"
+#define S_ORIGINALFILENAME "Annoex.exe\000"
+#include <sccver.rc>
+
+
+SCC_ICON                ICON    DISCARDABLE   "ANNOEX.ICO"
+SCC_ICONBOOKMARK        ICON    DISCARDABLE   "SCC_ICON.ICO"
+SCC_BITMAPBOOKMARK      BITMAP    DISCARDABLE   "SCC_BMP.BMP"
+
+
+SCC_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open...",                    MENU_FILE_OPEN
+        MENUITEM "&Close",                      MENU_FILE_CLOSE
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...",                   MENU_FILE_PRINT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Copy",                       MENU_EDIT_COPY
+        MENUITEM "&Cut",                        MENU_EDIT_CUT
+        MENUITEM "&Search",                     MENU_EDIT_SEARCH
+        MENUITEM "Search &Next",                MENU_EDIT_SEARCH_NEXT
+        MENUITEM "Replace",                     MENU_EDIT_REPLACE
+    END
+    POPUP "&Bookmark"
+    BEGIN
+        MENUITEM "&Drop",                       MENU_BOOKMARK_DROP
+        MENUITEM "&DropBmp",                    MENU_BOOKMARK_DROPBITMAP
+        MENUITEM "&First",                      MENU_BOOKMARK_FIRST
+        MENUITEM "&Next",                       MENU_BOOKMARK_NEXT
+        MENUITEM "&Previous",                   MENU_BOOKMARK_PREV
+        MENUITEM "&Last",                       MENU_BOOKMARK_LAST
+        MENUITEM "&Clear Selected Bookmarks",   MENU_BOOKMARK_CLEAR
+        MENUITEM "Clear &All Bookmarks",        MENU_BOOKMARK_CLEARALL
+    END
+    POPUP "&Position"
+    BEGIN
+        MENUITEM "First Char",                  MENU_POSITION_FIRST
+        MENUITEM "Last Char",                   MENU_POSITION_LAST
+        MENUITEM "Prev Char",                   MENU_POSITION_PREV
+        MENUITEM "Next Char",                   MENU_POSITION_NEXT
+        MENUITEM "Start Display",               MENU_POSITION_STARTDISPLAY
+        MENUITEM "End Display",                 MENU_POSITION_ENDDISPLAY
+        MENUITEM "Start Line",                  MENU_POSITION_STARTLINE
+        MENUITEM "End Line",                    MENU_POSITION_ENDLINE
+        MENUITEM "Prev Line",                   MENU_POSITION_PREVLINE
+        MENUITEM "Next Line",                   MENU_POSITION_NEXTLINE
+        MENUITEM "Prev Word",                   MENU_POSITION_PREVWORD
+        MENUITEM "Next Word",                   MENU_POSITION_NEXTWORD
+    END
+    POPUP "&Highlight"
+    BEGIN
+        MENUITEM "Black on Yellow",             MENU_HIGHLIGHT_BY
+        MENUITEM "Yellow on Red",               MENU_HIGHLIGHT_YR
+        MENUITEM "Custom",                      MENU_HIGHLIGHT_CUSTOM
+        MENUITEM SEPARATOR
+        MENUITEM "Search Hits ...",             MENU_HIGHLIGHT_SEARCHHITS
+        MENUITEM "Goto Next Hit",               MENU_HIGHLIGHT_NEXTHIT
+        MENUITEM "Goto Previous Hit",           MENU_HIGHLIGHT_PREVHIT
+        MENUITEM "Clear Selected Hits",         MENU_HIGHLIGHT_CLEARHITS
+        MENUITEM "Clear All Hits",              MENU_HIGHLIGHT_CLEARALLHITS
+        MENUITEM SEPARATOR
+        MENUITEM "Set Custom Style...",         MENU_HIGHLIGHT_SETCUSTOMSTYLE
+    END  
+    POPUP "He&lp"
+    BEGIN
+        MENUITEM "About...",                    MENU_HELP_ABOUT
+    END
+END
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SEARCHDIALOG DIALOG DISCARDABLE  0, 0, 186, 49
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Search Annotation Hits"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EDITSEARCHTEXT,7,9,108,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,129,6,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,23,50,14
+END
+
+
+HELP_ABOUTBOX DIALOG DISCARDABLE  34, 22, 187, 105
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "About Annoex"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            "SCC_ICON",611,11,17,18,20
+    LTEXT           "",HELP_ABOUTBOXVERINFO,40,10,139,42
+    DEFPUSHBUTTON   "OK",IDOK,75,75,32,14,WS_GROUP
+END
+
+IDD_REPLACEDIALOG DIALOG DISCARDABLE  0, 0, 362, 86
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "Replace"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Fi&nd what:",IDC_STATICSEARCH,7,10,34,8
+    EDITTEXT        IDC_REPLACESEARCHTEXT,58,7,222,14,ES_AUTOHSCROLL
+    LTEXT           "Re&place with:",IDC_STATICREPLACE,7,30,44,8
+    EDITTEXT        IDC_REPLACETEXT,58,27,222,14,ES_AUTOHSCROLL
+    CONTROL         "&Match case",IDC_MATCHCASE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,54,53,10
+    PUSHBUTTON      "&Find Next",IDC_FINDNEXT,305,7,50,14
+    PUSHBUTTON      "&Replace",IDC_REPLACE,305,26,50,14
+    PUSHBUTTON      "Replace &All",IDC_REPLACEALL,305,45,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,305,64,50,14
+END
+
+IDD_CUSTOMHILITE DIALOGEX 0, 0, 282, 264
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Custom Highlight"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,225,11,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,225,27,50,14
+    COMBOBOX        IDC_FGCOLOR,98,176,72,100,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Foreground Color:",-1,28,178,60,8
+    COMBOBOX        IDC_BGCOLOR,98,194,72,130,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Background Color:",-1,28,197,60,8
+    COMBOBOX        IDC_ULCOLOR,98,211,72,130,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Underline Color:",-1,28,214,52,8
+    CONTROL         "Use thin underline",IDC_USETHINUNDERLINE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,241,108,10
+    GROUPBOX        "Character Attributes",-1,9,9,205,143
+    GROUPBOX        "Colors",-1,9,163,205,71
+    CONTROL         "On",IDC_BOLD_ON,"Button",BS_AUTORADIOBUTTON | WS_GROUP,95,22,23,10
+    CONTROL         "Off",IDC_BOLD_OFF,"Button",BS_AUTORADIOBUTTON,122,22,27,10
+    CONTROL         "Unchanged",IDC_BOLD_UNCHANGED,"Button",BS_AUTORADIOBUTTON,151,22,47,10
+    RTEXT           "Bold",-1,15,22,67,8
+    CONTROL         "On",IDC_ITALIC_ON,"Button",BS_AUTORADIOBUTTON | WS_GROUP,95,38,23,10
+    CONTROL         "Off",IDC_ITALIC_OFF,"Button",BS_AUTORADIOBUTTON,122,38,27,10
+    CONTROL         "Unchanged",IDC_ITALIC_UNCHANGED,"Button",BS_AUTORADIOBUTTON,151,38,47,10
+    RTEXT           "Italic",-1,15,38,67,8
+    CONTROL         "On",IDC_STRIKEOUT_ON,"Button",BS_AUTORADIOBUTTON | WS_GROUP,95,54,23,10
+    CONTROL         "Off",IDC_STRIKEOUT_OFF,"Button",BS_AUTORADIOBUTTON,122,54,27,10
+    CONTROL         "Unchanged",IDC_STRIKEOUT_UNCHANGED,"Button",BS_AUTORADIOBUTTON,151,54,47,10
+    RTEXT           "Strikeout",-1,15,54,67,8
+    CONTROL         "On",IDC_UNDERLINE_ON,"Button",BS_AUTORADIOBUTTON | WS_GROUP,95,70,23,10
+    CONTROL         "Off",IDC_UNDERLINE_OFF,"Button",BS_AUTORADIOBUTTON,122,70,27,10
+    CONTROL         "Unchanged",IDC_UNDERLINE_UNCHANGED,"Button",BS_AUTORADIOBUTTON,151,70,47,10
+    RTEXT           "Underline",-1,15,70,67,8
+    CONTROL         "On",IDC_DUNDERLINE_ON,"Button",BS_AUTORADIOBUTTON | WS_GROUP,95,86,23,10
+    CONTROL         "Off",IDC_DUNDERLINE_OFF,"Button",BS_AUTORADIOBUTTON,122,86,27,10
+    CONTROL         "Unchanged",IDC_DUNDERLINE_UNCHANGED,"Button",BS_AUTORADIOBUTTON,151,86,47,10
+    RTEXT           "Double Underline",-1,15,86,67,8
+    CONTROL         "On",IDC_WUNDERLINE_ON,"Button",BS_AUTORADIOBUTTON | WS_GROUP,95,102,23,10
+    CONTROL         "Off",IDC_WUNDERLINE_OFF,"Button",BS_AUTORADIOBUTTON,122,102,27,10
+    CONTROL         "Unchanged",IDC_WUNDERLINE_UNCHANGED,"Button",BS_AUTORADIOBUTTON,151,102,47,10
+    RTEXT           "Word Underline",-1,15,102,67,8
+    CONTROL         "On",IDC_DASHUNDERLINE_ON,"Button",BS_AUTORADIOBUTTON | WS_GROUP,95,118,23,10
+    CONTROL         "Off",IDC_DASHUNDERLINE_OFF,"Button",BS_AUTORADIOBUTTON,122,118,27,10
+    CONTROL         "Unchanged",IDC_DASHUNDERLINE_UNCHANGED,"Button",BS_AUTORADIOBUTTON,151,118,47,10
+    RTEXT           "Dash Underline",-1,15,118,67,8
+    CONTROL         "On",IDC_DOTUNDERLINE_ON,"Button",BS_AUTORADIOBUTTON | WS_GROUP,95,134,23,10
+    CONTROL         "Off",IDC_DOTUNDERLINE_OFF,"Button",BS_AUTORADIOBUTTON,122,134,27,10
+    CONTROL         "Unchanged",IDC_DOTUNDERLINE_UNCHANGED,"Button",BS_AUTORADIOBUTTON,151,134,47,10
+    RTEXT           "Dot Underline",-1,15,134,67,8
+END
+
+IDD_RIGHTSINGLECLICK DIALOGEX 0, 0, 186, 90
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Right Single Click"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,121,26,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,120,46,50,14
+    LTEXT           "Right Single Click Event",IDC_STATICRIGHTSINGLECLICK,16,33,105,8
+END
+
+IDD_DOUBLECLICK DIALOGEX 0, 0, 186, 90
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Double Click"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,24,50,14
+    LTEXT           "Double Click Event",IDC_STATICDOUBLECLICK,25,30,86,8
+END
+
+IDD_LEFTSINGLECLICK DIALOGEX 0, 0, 186, 90
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Left Single Click"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,24,50,14
+    LTEXT           "Left Single Click Event",IDC_STATICLEFTSINGLECLICK,23,38,92,8
+END
+
+
+
