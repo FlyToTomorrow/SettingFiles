@@ -1,0 +1,23 @@
+#!/usr/bin/env zsh
+
+EvolutionPath='./Data_evolution/'
+[ ! -d $EvolutionPath ] && mkdir $EvolutionPath
+Command0='./SFLO_MPI'
+process_nume=5
+
+SwitchType=serial_coupled_MR_switch
+SwitchConfig=${SwitchType}_injection
+SpectrumConfig=Spectrum_analyzer_config
+PSOConfig0=PSO_config_WDM_const
+wavelength_start=1.45
+wavelength_end=1.65
+wavelength_num=4e4
+WarningLog=${EvolutionPath}Evolution_warnings.log
+
+for FabricType in 'DRAGON' 'FODON' 'Crossbar' 'PILOSS'
+do
+    FabricConfig=${FabricType}_config
+    Log=${EvolutionPath}${FabricType}_WDM
+    PSOConfig=${EvolutionPath}${PSOConfig0}_${FabricType}
+    mpirun -np $process_nume $Command0 $SwitchType $wavelength_start $wavelength_end $wavelength_num $SwitchConfig   $SpectrumConfig $PSOConfig $FabricConfig > $Log 2>$WarningLog
+done

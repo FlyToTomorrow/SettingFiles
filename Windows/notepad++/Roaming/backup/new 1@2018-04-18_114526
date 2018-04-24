@@ -1,0 +1,4 @@
+serial_coupled_MR_switch 1.45 1.65 5e4 serial_coupled_MR_switch_injection Spectrum_analyzer_config PSO_config_WDM_var_wohist Crossbar_config
+
+
+time ./workspace/generic_msi_mosi_cmp_directory/bin/jade.exec -d ./architectures/arc/OSwitchNet_4x128.arc -w ./architectures/net/OSwitchNet_4x128.txt -i ./applications/app/ML-FMP-40x41x41x4-arm.sam -g ./applications/map/ML-FMP_OSwitchNet_4x128.map -R 0.2 -y  -S DRAGON -P ./architectures/config/parameter_setting_DRAGON.cfg -O ./TestResults/Result_DRAGON_sync0.8_OSwitchNet_4x128_20180419.txt > ./TestResults/run_DRAGON_sync0.8_OSwitchNet_4x128_20180419.log
