@@ -229,7 +229,7 @@ alias sc='svn commit -m'
 alias gs='git status'
 alias ga='git add'
 alias gc='git commit -m'
-alias gp='git push zhifei@fantasy.ece.ust.hk:/home/zhifei/GitRepositories/CLOSO master'
+alias gpC='git push zhifei@fantasy.ece.ust.hk:/home/zhifei/GitRepositories/CLOSO master'
 
 # =============================================================================
 #                                Key Bindings
