@@ -229,8 +229,9 @@ alias sc='svn commit -m'
 alias gs='git status'
 alias ga='git add'
 alias gc='git commit -m'
-alias gpC='git push zhifei@fantasy.ece.ust.hk:/home/zhifei/GitRepositories/CLOSO master'
+alias gpc='git push zhifei@fantasy.ece.ust.hk:/home/zhifei/GitRepositories/CLOSO master'
 
+alias v='f -e vim'  # quick opening files with vim
 # =============================================================================
 #                                Key Bindings
 # =============================================================================
