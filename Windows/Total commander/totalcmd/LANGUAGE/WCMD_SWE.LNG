@@ -498,6 +498,11 @@ codepage=1252
 1391="Inga data mottagna! Antingen fel kabel eller ansluten till fel port."
 1392="Porten används redan!"
 1393="Kunde inte låsa porten för exklusivt användande!"
+1394="Från aktiv panel (källmapp)"
+1395="Från målmapp"
+1396="Ogiltig inmatning!"
+1397="Engelska i titlar"
+1398="För lång söksträng!"
 
 1400="Tidigare namn;Typ;Nytt namn;Storlek;Ändrad;Sökväg"
 1401="Fel i definitionssträngen!"
@@ -855,7 +860,7 @@ Remark: These strings appear in Control Panel - Multimedia:
 1796="Vill du att alla filändelser alltid ska visas? Denna inställning fungerar i ALLA Windows-program."
 1797="Vill du aktivera automatisk uppdateringskontroll?"
 1798="Välj standardmapp för ikoner"
-1799="Automatisk uppdateringskontroll är aktiverat. Vill du avaktivera automatisk uppdateringskontroll?"
+1799="Automatisk uppdateringskontroll är aktiverad. Vill du inaktivera automatisk uppdateringskontroll?"
 
 1800="Programmet startades"
 1801="Programmet avslutades"
@@ -943,6 +948,7 @@ Remark: These strings appear in Control Panel - Multimedia:
 2047="Skapa separata &checksummefiler för varje mapp"
 2048="Denna enhet tycks vara låst med Bitlocker! Låsa upp?"
 2049="Ange lösenordet för Bitlocker!"
+2050="Mappstorlekar är inte indexerade! Du måste aktivera denna funktion i inställningar för 'Allt'."
 
 {COMMON}
 4001="OK"
@@ -987,6 +993,7 @@ Remark: These strings appear in Control Panel - Multimedia:
 5060="Kör"
 
 5061="Ändra verktygsfältet"
+5062="Ändra enkelknapp"
 5064="XP-&stil"
 5065="&Verktygsfält:"
 5066="Knappsto&rlek:"
@@ -1236,7 +1243,7 @@ Remark: These strings appear in Control Panel - Multimedia:
 5314="Visa i&koner på flikarna"
 5315="Skala dialogfönster (skalar inte huvudfönstret)"
 5316="Välj upplösning (DPI):"
-5317="Extra distans: &Horisontal:"
+5317="Extra distans: &Horisontell:"
 5318="Ver&tikal:"
 
 5320="Kopiera/Ta bort"
@@ -1319,7 +1326,7 @@ Remark: These strings appear in Control Panel - Multimedia:
 5406=" Åtgärdsstatus "
 5407="&Logga lyckade åtgärder"
 5408="L&ogga fel"
-5409="Logga &överhoppade filer (när 'Hoppa över'/'Hoppa över allt' har valts)"
+5409="Logga &överhoppade filer (när 'Hoppa över'/'Hoppa över alla' har valts)"
 5410=" Rotera loggfilen "
 5411="&Aldrig (logga alltid till samma loggfil)"
 5412="Varje dag &efter midnatt"
@@ -1652,6 +1659,7 @@ Remark: These strings appear in Control Panel - Multimedia:
 
 6031="&Byte per fil:"
 6032="&Ta bort filer på destinationsdisken (endast flyttbara diskar)"
+6034="&Klientcertifikat:"
 6035="Kryptering av &filnamn:"
 6036="Autodetektera (UTF-8 om möjligt)\nANSI (lokal codepage)\nASCII/DOS (lokal codepage)\nUTF-8"
 6037="Använd huvudlösenor&d för lösenordsskydd"
@@ -1694,7 +1702,7 @@ Remark: These strings appear in Control Panel - Multimedia:
 6101=" Uppdatera automatiskt när programmet aktiveras "
 6102="Uppdatera &inte följande enheter:"
 6103="&Kom inte ihåg följande enheter:"
-6104="OBS! Använd omvänt snedstreck (\) för nätverkssökvägar (UNC), / för filsystemsplugins och ett kolon (:) för virtuella mappar (som t.ex. Skrivbordet)."
+6104="OBS! Använd omvänt snedstreck (\) för nätverkssökvägar (UNC), snedstreck (/) för filsystemsplugins och kolon (:) för virtuella mappar (som t.ex. Skrivbordet)."
 6105=" Uppdatera automatiskt när filer ändras "
 6106="&Uppdatera när filer skapas, tas bort och döps om"
 6107="Även när &storlek, fildatum eller filattribut ändras"
@@ -1728,9 +1736,9 @@ Remark: These strings appear in Control Panel - Multimedia:
 6151="Visa ikoner för &kommandon i huvudmenyn"
 6152="Visa &3-dimensionell ram runt ikoner"
 6153="Visa ma&rkerade objekt som intryckta knappar i st. f. förbockad markering"
-6154="Genom att klicka på ikonen"
-6155="Endast på pekskärm"
-6156="Gummibandsval"
+6154="Gen&om att klicka på ikonen"
+6155="Endas&t på pekskärm"
+6156="Gummib&andsval"
 
 6157="Visningsläge"
 6158="Automatiskt lägesbyte"

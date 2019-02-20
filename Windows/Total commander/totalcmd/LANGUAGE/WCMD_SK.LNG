@@ -201,7 +201,7 @@ codepage=1250
 700="Prieèinok"
 701="S písmenom jednotky"
 702="Sie (cesta UNC)"
-703="Virtuálny prieèinok"
+703="Virtuálny prieèinok"                                                                                   
 704="FTP pripojenie"
 705="Archív"
 706="Rozšírenie systému súborov"
@@ -505,6 +505,12 @@ codepage=1250
 1391="iadne dáta neboli prijaté. Buï máte nesprávny kábel, alebo je pripojenı na nesprávny port."
 1392="Tento PORT sa u pouíva."
 1393="Tento PORT sa nedá uzamknú pre exkluzívne pouitie."
+
+1394="v aktívnom okne (zdroj)"
+1395="v cie¾ovom okna"
+1396="Neplatnı vstup."
+1397="Anglické slová v názvoch"
+1398="H¾adanı text je príliš dlhı."
 
 1400="Starı názov;Ext.;Novı názov;Ve¾kos;Dátum;Umiestnenie"
 1401="Chyba v definícii reazca."
@@ -981,6 +987,7 @@ Remark: These strings appear in Control Panel - Multimedia:
 2047="Vytvori samostatné &kontrolné súèty pre kadı prieèinok"
 2048="Toto zariadenie je pravdepodobne uzamknuté nástrojom Bitlocker. Chcete ho odomknú?"
 2049="Zadajte heslo."
+2050="Ve¾kosti prieèinkov nie sú indexované. Túto funkciu je potrebné povoli v nástroji 'Everything'."
 
 4001="OK"
 4002="Zruši"
@@ -999,6 +1006,8 @@ Remark: These strings appear in Control Panel - Multimedia:
 5026="Všetky &súbory s príponou:"
 5027="Priradi &ku:"
 5028="&Upravi..."
+
+5029="Na&hradi èím:"
 
 5041="Zmena atribútov"
 5042="Súèas&nı"
@@ -1021,6 +1030,7 @@ Remark: These strings appear in Control Panel - Multimedia:
 5060="Vykona"
 
 5061="Panel s nástrojmi - vlastnosti"
+5062="Panel s nástrojmi - Zmena tlaèidla"
 5064="Štıl Windows &XP"
 5065="&Názov súboru:"
 5066="&Ve¾kos:"
@@ -1720,6 +1730,8 @@ Remark: These strings appear in Control Panel - Multimedia:
 
 6031="Poèet &byte v súbore"
 6032="Zma súbory na cie¾ovom disku (len vymenite¾né disky)"
+
+6034="Klientsky &certifikát:"
 
 6035="Kódovanie názvov &súborov:"
 

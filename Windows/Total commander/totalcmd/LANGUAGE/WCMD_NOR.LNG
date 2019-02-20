@@ -502,6 +502,11 @@ codepage=1252
 1391="Ingen data mottatt! Enten har du feil kabel, eller så er den koblet til feil port."
 1392="Porten er allerede i bruk!"
 1393="Kunne ikke låse porten for eksklusiv bruk!"
+1394="Fra aktivt panel (kilde)"
+1395="Fra mål"
+1396="Ikke gyldig verdi!"
+1397="Engelsk i Tittel"
+1398="Søketekst er for lang!"
 1400="Gammelt navn;Ext.;Nytt navn;Størrelse;Dato;Plassering"
 1401="Feil i definisjonsstreng!"
 1402="<Feil!>"
@@ -852,7 +857,7 @@ file
 1794="Konfigurere visningsmodus"
 1795="Advarsel: Gjeldede oppsett for Explorer er å skjule filetternavn for kjente filtyper. Dette påvirker også virtuelle mapper i Total Commander."
 1796="Vil du alltid vise alle filetternavn? Denne innstillingen påvirke ALLE Windows-programmer."
-1797="Ønsker du å slå på automatisk oppdateringskontoll?"
+1797="Ønsker du å slå på automatisk oppdateringskontroll?"
 1798="Velg standard ikonbibliotek"
 1799="Automatiske oppdateringskontroll er påslått. Vil du STOPPE automatisk oppdateringskontroll?"
 
@@ -942,6 +947,7 @@ file
 2047="Opprett separate sjekksumfiler for hver &mappe"
 2048="Denne stasjonen er låst av Bitlocker! Ønsker du å låse den opp?"
 2049="Vennligst oppgi Bitlocker-passordet!"
+2050="Mappestørrelse er ikke indeksert! Du kan slå på denne funksjonen under innstillinger i verktøyet 'Everything'."
 
 4001="OK"
 4002="Avbryt"
@@ -960,6 +966,7 @@ file
 5026="Fil&type (slutter på):"
 5027="&Assosier med:"
 5028="R&edigere type..."
+5029="E&rstatt med:"
 
 5041="Endre attributter"
 5042="Nåvære&nde"
@@ -982,6 +989,7 @@ file
 5060="Utføre"
 
 5061="Endre verktøylinje"
+5062="Endre knapp"
 5064="XP-ut&seende"
 5065="&Verktøylinje:"
 5066="Stø&rrelse:"
@@ -1644,6 +1652,7 @@ file
 6030="Husk innhol&d av alle besøkte mapper (i hurtigbuffer)"
 6031="&Bytes pr. fil"
 6032="&slett filer på måldisk (kun på flyttbare disker)"
+6034="Kli&entsertifikat:"
 6035="Kodin&g av filnavn:"
 6036="Auto-gjenkjenn (UTF-8 om mulig)\nANSI (lokalt kodesett)\nASCII/DOS (lokalt kodesett)\nUTF-8"
 6037="Bruk maste&rpassord for å beskytte passordet"

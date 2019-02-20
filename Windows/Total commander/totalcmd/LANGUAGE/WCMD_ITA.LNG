@@ -82,7 +82,7 @@ codepage=1252
 122="Impossibile copiare/muovere: Il contenuto della cartella è stato modificato!"
 123="Si può stampare solo un file alla volta!"
 124="Non è possibile stampare un programma!"
-125="Errore: Il file deve essere associato ad un programma per essere stampato!\r\rCarica il file in un apposito Editor (es. Notepad) e stampalo."
+125="Errore: Il file deve essere associato ad un programma per essere stampato!\r\rCarica il file in un apposito Editor (es. Blocco note) e stampalo."
 126="Scansione cartelle: %3i  \r(ESC Annulla)"
 128="Modifica menu &avvio..."
 129="Men&u"
@@ -402,7 +402,7 @@ codepage=1252
 1296="ATTENZIONE: nessuna decodifica apportata!"
 1297="Errore CRC durante la decodifica del file. File decodificato probabilmente difettoso!"
 1298="ERRORE: fine prematura del file! Se si tratta di un file codificato con più parti,\nle parti DEVONO essere numerate come segue: nome01.uue, nome02.uue, ..."
-1299="ATTENZIONE: carattere(i) illegali nel file sorgente!"
+1299="ATTENZIONE: carattere/i illegale/i nel file sorgente!"
 1300="Errore di decodifica sconosciuto!"
 1301="Codifica il file %s nella cartella:"
 1302="Codifica fallita!"
@@ -497,6 +497,11 @@ codepage=1252
 1391="Impossibile ricevere dati! Cavo inadatto oppure connessione a porta sbagliata."
 1392="Porta in uso!"
 1393="Impossibile bloccare la porta per l'uso esclusivo!"
+1394="Da sinistra"
+1395="Da destra"
+1396="Input non valido!"
+1397="Inglese nei titoli"
+1398="Stringa da cercare troppo lunga!"
 
 1400="Vecchio nome;Est.;Nuovo nome;Dimensioni;Data;Posizione"
 1401="Errore nella stringa di definizione!"
@@ -517,7 +522,7 @@ codepage=1252
 1420="Definisci nuovo..."
 1430="Ridigitare la parola chiave per la verifica!"
 1431="Salvare la cartella di destinazione nell'elenco dei file"
-1432="Minuto(i)"
+1432="Minuto/i"
 1433="Stampa cartella:"
 1434="Numero di livelli per cartella (-1=tutte)"
 1435=" k in "
@@ -773,7 +778,7 @@ codepage=1252
 1717="Modificare?"
 1718="Configura..."
 1719="Nota: impossibile codificare le cartelle; selezionare direttamente le connessioni!"
-1720="%d connessione(i) non hanno una password memorizzata. La loro selezione è stata rimossa."
+1720="%d connessione/i non hanno una password memorizzata. La loro selezione è stata rimossa."
 1721="Rimuovere la codifica da tutte le connessioni selezionate?"
 1722="Associazioni interne"
 1723="Questo nome azione (%s) non è consentito!\n\n1. I nomi azione non devono iniziare o finire con uno spazio o un punto\n2. I nomi non devono contenere il segno uguale (=) o caratteri Unicode\n3. Le azioni non possono essere duplicate."
@@ -940,6 +945,7 @@ codepage=1252
 2047="Crea file chec&ksum separati per ogni cartella"
 2048="Questa unità sembra bloccata da Bitlocker! Vuoi sbloccarla?"
 2049="Inserisci la password di Bitlocker!"
+2050="Dimensione cartella non indicizzata! È necessario abilitare questa funzione nelle impostazioni dello strumento 'Everything'."
 {COMMON}
 4001="OK"
 4002="Annulla"
@@ -960,6 +966,7 @@ codepage=1252
 5026="Tutti i file con &estensione:"
 5027="A&ssociali a:"
 5028="&Modifica tipo..."
+5029="S&ostituisci con:"
 
 {ATTRIBDLG}
 5041="Cambia attributi"
@@ -984,6 +991,7 @@ codepage=1252
 
 {BUTTONCHANGEDLG /oneBUTTONCHANGEDLG}
 5061="Modifica barra pulsanti"
+5062="Modifica pulsante singolo"
 5064="Stile &XP"
 5065="&Barra pulsanti:"
 5066="&Dimens.:"
@@ -1024,7 +1032,7 @@ codepage=1252
 5098="Bit significativo"
 
 {DLGCONFIGALL}
-5101="Configurazione"
+5101="Impostazioni"
 5102="Disposizione\nOperazioni\nVisualizzazione\nLingua\nVisualizzatore/Editor\nFont caratteri\nColori\nVarie\nProgrammi compressione\nCompressione ZIP\nTabulatori"
 5103="Visualizza"
 5104="&Barra pulsanti"
@@ -1394,7 +1402,7 @@ codepage=1252
 
 {FindFile}
 5601="Ricerca file"
-5602="Generali\nEstese\nCarica/Salva\nPlugin"
+5602="Generale\nEstesa\nCarica/salva\nPlugin"
 5603="&Trova:"
 5604="&Cerca in:"
 5605="&Unità"
@@ -1414,7 +1422,7 @@ codepage=1252
 5619="UTF&8"
 5620="Data &fra:"
 5621="&e"
-5622="N&on più vecchio di:"
+5622="Pi&ù recente di:"
 5623="&Dimensioni file:"
 5624="A&ttributi:"
 5625="&Archivio"
@@ -1422,7 +1430,7 @@ codepage=1252
 5627="Nas&costo"
 5628="Siste&ma"
 5629="Ca&rtella"
-5630="Ora(e)\nGiorno(i)\nSettimana(e)\nMese(i)\nAnno(i)"
+5630="Ora/e\nGiorno/i\nSettimana/e\nMese/i\nAnno/i"
 5631="Trova duplicati di file"
 5632="Stesso contenuto"
 5633="Stesso nome"
@@ -1435,14 +1443,14 @@ codepage=1252
 5641="&Carica"
 5642="S&alva"
 5643="Eli&mina"
-5644="stessi campi pl&ugin"
+5644="Stessi campi pl&ugin"
 5645="Più vecchio di:"
 5660="Esito della ricerca:"
 5661="Visuali&zza"
 5662="&Nuova ricerca"
 5663="&Vai a"
 5664="Apri pannel&lo"
-5670="&Inizia Ricerca"
+5670="Avv&ia ricerca"
 
 5671="&Cerca nei plugin"
 5672="Corrisponde:"
@@ -1667,7 +1675,7 @@ codepage=1252
 6024="Usa modalità passiva per trasferimenti (come browser WWW)"
 6025="&Invia comandi:"
 6026="&Tipo di server:"
-6027="Invia &comando per mantenere la connessione attiva:"
+6027="Invia comando per &mantenere la connessione attiva:"
 6028="C&omando:"
 6029="Int&ervallo comando: ogni"
 6030="Salva (in cache) i contenuti di tutte le cartelle &visitate"
@@ -1676,6 +1684,8 @@ codepage=1252
 6031="&Byte per file"
 6032="&Elimina file su disco di destinazione (solo dischi rimovibili)"
 
+{Connection details (continued)}
+6034="&Certificato client:"
 6035="Codi&fica dei nomi file:"
 6036="Auto rilevamento (UTF-8 se possibile)\nANSI (codice pagina locale)\nASCII/DOS (codice pagina locale)\nUTF-8"
 6037="Usa passwo&rd principale per proteggere la password"

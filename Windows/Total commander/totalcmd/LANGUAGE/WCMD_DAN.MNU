@@ -78,7 +78,7 @@ POPUP "&Net"
   MENUITEM "Tilslut til FTP-&server...\tCtrl+F", cm_FtpConnect
   MENUITEM "Ny FT&P-forbindelse...\tCtrl+N", cm_FtpNew
   MENUITEM "Afbryd FTP-forbind&else\tSkift+Ctrl+F", cm_FtpDisconnect
-  MENUITEM "FTP Vis skj&ulte filer", cm_FtpHiddenFiles
+  MENUITEM "FTP vis skj&ulte filer", cm_FtpHiddenFiles
   MENUITEM "FTP do&wnload fra liste...",  cm_FtpDownloadList
   MENUITEM "&Kabelforbindelse til anden PC...", cm_DirectCableConnect
 END_POPUP
@@ -98,9 +98,9 @@ POPUP "&Vis"
   MENUITEM "Miniaturebille&der\tSkift+Ctrl+F1", 269
   MENUITEM "&Hurtig visning\tCtrl+Q",cm_SrcQuickview
   MENUITEM "Paneler under hinanden", cm_VerticalPanels
-  MENUITEM "Nyt Fane&blad\tCtrl+T", 3001
+  MENUITEM "Nyt fane&blad\tCtrl+T", 3001
   MENUITEM SEPARATOR
-  MENUITEM "&Alle Filer\tCtrl+F10", cm_SrcAllFiles
+  MENUITEM "&Alle filer\tCtrl+F10", cm_SrcAllFiles
   MENUITEM "&Programmer\tCtrl+F11", cm_SrcExecs
   MENUITEM "*.*", cm_srcuserspec
   MENUITEM "Mask&e...\tCtrl+F12", cm_SrcUserDef

@@ -1,4 +1,4 @@
-Romanian - by Eugen ANTAL - ver. 9.00
+Romanian - by Eugen ANTAL - ver. 9.20
 codepage=1250
 0="Acces interzis la fiºierul:\n[%s]"
 1="Tipuri de fiºiere (Ex: *.doc ; *.txt)"
@@ -23,7 +23,7 @@ codepage=1250
 20="Numele fiºierului de editat:"
 21="Suprascrie fiºierul existent (în «destinaþie»): "
 22="Cu fiºierul (din «sursã»): "
-23="Ecran comparativ:"
+23="Ecran comparator:"
 24=" Memorie externã detaºabilã "
 25="Miniat&uri"
 26="&Câmpuri personalizate"
@@ -82,7 +82,7 @@ codepage=1250
 122="Total Commander nu poate copia/muta! Un alt program foloseºte fiºierul sau folderul!"
 123="Nu se pot tipãri mai multe fiºiere deodatã!"
 124="Un fiºier executabil (program) nu poate fi tipãrit !"
-125="Eroare: pentru tipãrire, fiºierul trebuie asociat cu un program!\r\rTrebuie citit într-un editor adecvat ºi tipãrit de acolo."
+125="Eroare: pentru a fi tipãrit, fiºierul trebuie asociat cu un program!\r\rTrebuie citit într-un editor adecvat ºi tipãrit de acolo."
 126="Citesc folderul: %3i  (ESC = Întrerupere)"
 128="Configurare meniu definit de &Utilizator (Start)…"
 129="S&tart"
@@ -182,8 +182,8 @@ codepage=1250
 665="Mutã/Redenumeºte:"
 666="ªterg:"
 667="(niciunul)"
-668="Prezent"
-669="Absent"
+668="prezent"
+669="absent"		  
 672="sRDGER\227`^YSX@D\227tXZZVYSRE"
 673="aRED^BYRV\227`^YSX@D\227tXZZVYSRE\227"
 674="\n\n\036\227\206\216\216\204\232\205\207\207\207\227t_E^DC^VY\227p_^D[RE\ntXSB[\227bYM^G\227GEXPEVZVC\227SR\227~yqx\232m~g\227PEXBG\n\ncEVSBTRERV\227ÙY\227[^ZUV\227EXZÕYÔ\215\nvCC^[V\227qR_ÞE\227\237VCC^[VhQR_REw_XCZV^[\231TXZ\236\n\ngEXGE^RCVE\215\n"
@@ -462,7 +462,7 @@ codepage=1250
 1353="Fiºiere diferite"
 1354="Comprimare imposibilã! Unul din fiºiere este mai mare de 2 Gb, limita maximã admisibilã pentru ZIP."
 1355="Atenþie: Mãrimea totalã a fiºierelor selectate (ºi necomprimate) este peste 2 GB.\nArhiva rezultatã poate depãºi ºi ea 2 GB ºi va fi inutilizabilã.\nVreþi sã continui oricum?"
-1356="Comandã implicitã Total Cmd. Nu sunt modificãri"
+1356="Comandã implicitã a Total Cmd. Nu sunt modificãri"
 1357="Windows nu are nici o imprimantã instalatã! Vã rog instalaþi mai întâi o imprimantã în: Start->Panou de Control->Imprimante!"
 1358="Diferenþa de fus orar (ore): > 0 dacã serverul este la EST de poziþia ta geograficã"
 1359="Sincronizare cu FTP:\n\nATENÞIE: Aceastã funcþie schimbã data/ora fiºierului local în timpul transferului!\nCitiþi documentaþia înainte de a începe!"
@@ -500,6 +500,12 @@ codepage=1250
 1391="Nu s-au recepþionat date! Calculatoarele nu sunt conectate. Cablul poate fi întrerupt sau conectat pe alt port!"
 1392="Portul este deja folosit!"
 1393="Portul nu poate fi alocat pentru uz exclusiv!"
+1394="Din fereastra activã (sursã)"
+1395="Din destinaþie"
+1396="Date introduse nevalide!"
+1397="Englezã cu Titluri"
+1398="Textul cãutat este prea lung!"
+
 {Rename tool}
 1400="Nume anterior;Ext.;Nume nou;Mãrime;Datã;Destinaþie"
 1401="Eroare la definirea câmpului!"
@@ -696,6 +702,7 @@ codepage=1250
 1630="Deschide lista salvatã - Foldere+Opþiuni - pentru sicronizare"
 1631="Eroare: Folderul [%s]\rexistã deja!\rIndicaþi un alt nume."
 1632="Introduceþi mãrimea pentru fiecare arhivã în Ko (1 Ko=1024 octeþi):"
+{FTP_Ajutor-SSL HTML etc}
 1633="Biblioteca OpenSSL nu a fost gãsitã!\nPentru utilizarea SSL, vã rog descãrcaþi cele mai recente biblioteci DLLs OpenSSL\n apoi plasaþi-le în folderul în care este instalat T.C. !"
 1634="În prim-plan"
 1635="Un folder cu acest nume\n%s\nexistã deja.\n\nVreþi sã mutaþi Fiºierul/Folderul în acest sub-folder?"
@@ -815,7 +822,7 @@ codepage=1250
 1753="Meniu contextual"
 1754="Proprietãþi"
 
-1760="Titlul panourilor de fiºiere (file)"
+1760="Titlu file"
 1761="Partea activã: Text"
 1762="Partea activã: Fundal"
 1763="Partea inactivã: Text"
@@ -943,6 +950,7 @@ codepage=1250
 2047="Creazã suma de control separat pentru fiecare &director"
 2048="Acest disc pare a fi blocat de Bitlocker! Îl deblocaþi?"
 2049="Vã rog introduceþi parola Bitlocker!"
+2050="Mãrimea folderului nu este indexatã! \nEste nevoie ca aceastã funcþie sã fie întâi activatã în aplicaþia 'Everything'.."
 
 {COMMON}
 4001="OK"
@@ -955,7 +963,7 @@ codepage=1250
 5003="Opþi&uni"
 5004="Opþiuni suprascriere"
 5005="Opþiuni avansate"
-5006="&Reþine (pânã când programul va fi închis sau minimizat)"
+5006="Memo&reazã (pânã când programul va fi închis sau minimizat)"
 
 {ASSOCIATEDLG}
 5021="Asociere programe pe tipuri de fiºiere"
@@ -963,11 +971,12 @@ codepage=1250
 5026="Toate fiºierele ce au extensia:"
 5027="&vor fi deschise cu programul:"
 5028="&Modificare…"
+5029="Înlocui&re cu :"
 
 {ATTRIBDLG}
 5041="Atribute"
 5042="Ac&um!"
-5043="Încarcã atributele fiºierului de sub cursor"
+5043="Încarcã atributele fiºierului de sub cursor: "
 5045="Inclusiv în su&b-foldere"
 5046=" Schimbare atribute "
 5047="a  'Arhi&vare'"
@@ -987,6 +996,7 @@ codepage=1250
 
 {BUTTONCHANGEDLG /oneBUTTONCHANGEDLG}
 5061="Modificare barã de butoane"
+5062="Modificare buton"
 5064="Stil &XP"
 5065="Bara B&utoane:"
 5066="&Mãrime:"
@@ -1023,6 +1033,7 @@ codepage=1250
 5093="Valori:"
 5094="&Adãugare atribute"
 5095="&Eliminare atribute"
+;Atribute speciale UNIX...
 5096="Setare UID la start"
 5097="Setare GID la start"
 5098="Bit Sticky"
@@ -1045,6 +1056,7 @@ codepage=1250
 5115="Afiºare file sepa&rate pentru foldere - 'semne de carte'"
 5116="Afiºare butoane pentru Istoric ºi Fa&vorite"
 5117="Te&ma de fundal Windows XP (meniu + bara de butoane)"
+;TC 7.5 
 5118="Afiºare cale selectabilã (mod 'firimituri')"
 5119="&Expandare automatã la staþionarea mouse-lui deasupra"
 5120=" Marcarea cu mouse-ul "
@@ -1114,6 +1126,7 @@ codepage=1250
 5187="&Editor:"
 5188="Taste:"
 5189="Se&tare vizualizator intern…"
+{Fonturi}
 5190="Font utilizat în lista de &fiºiere"
 5191="Schimbare font"
 5192="Font utilizat în fereastra p&rincipalã / antet"
@@ -1122,6 +1135,7 @@ codepage=1250
 5195="Afiºare fiºiere asc&unse"
 5196="Afiºare fiºiere s&istem"
 5197="&Module/FTP: Re-încarcã automat fiºierele modificate"
+{Culori}
 5199="Fundal #&2 :"
 5200=" Setãri culori "
 5201="&Scris"
@@ -1170,7 +1184,7 @@ codepage=1250
 5245="Nume fiºiere în format &8.3"
 5246="Data ZIP = data fiºi&erului cel mai nou"
 5247="Creare arhivã &TAR pentru LINUX (SunOS…)"
-5248="&Deschid arhiva ZIP parþial"
+5248="&Deschide arhiva parþialã ZIP"
 5249="Pãstreazã fiºierele defecte (eroare CRC)"
 5250=" Extensia fiºierului va fi afiºatã "
 5251="di&rect dupã numele fiºierului"
@@ -1213,9 +1227,11 @@ codepage=1250
 5287=" Alia&s :"
 5288="s"
 5289="Mod PORT : adresã e&xternã (IP/DNS/HTTP):"
+{sunete}
 5290="Sunete predefinite"
 5291="Confi&gurare"
 5292="Doar la operaþiuni cu durata peste"
+{Comentarii}
 5293="Comentariul fiºierului"
 5294="Tip implicit:"
 5295="Copiere com&entarii odatã cu fiºierele"
@@ -1223,6 +1239,7 @@ codepage=1250
 5297="Module Sistem (F.S.)"
 5298="Set caractere DOS"
 5299="Win +"
+{Configurare file}
 5300="Multi-File"
 5301="Interfaþa filelor"
 5302="Aratã filele chiar ºi atunci când nu este definitã decât o filã"
@@ -1234,7 +1251,7 @@ codepage=1250
 5308="&Închide o filã prin dublu-clic"
 5309="Ctrl+Sãgeatã Sus = &Deschide o filã nouã în prim-plan"
 5310="Fila &nouã se va deschide lângã cea activã"
-5311="Marcare filã anco&ratã cu un asterisc (*)"
+5311="(*) Marcarea filei anco&rate cu un asterisc"
 5312="Activare fereastrã «destinaþie» printr-un click pe &filã"
 5313="&Totdeauna se afiºeazã litera unitãþii de disc pe filã"
 5314="Încarcã pictograme pentru file -->"
@@ -1243,6 +1260,7 @@ codepage=1250
 5317="Distanþa extra: &orizontalã:"
 5318="&verticalã:"
 
+{Config. Copiere ¦ Stergere}
 5320="Copiere/ªtergere"
 5321=" Setare Mod de Copiere (Doar pentru experþi!)"
 5322="Metoda implicitã (fiabilã dar lentã!)"
@@ -1618,7 +1636,7 @@ codepage=1250
 5946="Reduce imagini&le prea mari"
 5947="Centrare imagine"
 5950="&Ajutor"
-
+;Lister, meniu *Codare*
 5951="&Codare"
 5952="Ca ºi configurarea &Fontului curent"
 5953="&ANSI (codul de paginã local) (0)"
@@ -1681,6 +1699,7 @@ codepage=1250
 6031="&O parte va avea:"
 6032="ªter&g fiºierele de pe discul «destinaþie» (doar de pe dischete)"
 {Connection details (continued)}
+6034="&Certificat client:"
 6035="Coda&rea numelui de fiºier:"
 6036="Auto-Detectare (UTF-8 dacã e posibil)\nANSI (codul de paginã local)\nASCII/DOS (codul de paginã local)\nUTF-8\nEastern Europe (1250)\nCyrillic Windows (1251)\nWestern Latin1 (1252)\nGreek (1253)\nTurkish (1254)\nHebrew (1255)\nArabic (1256)\nBaltic (1257)\nVietnamese (1258)\nChinese Main Land (936)\nChinese Taiwan (950)\nJapanese (932)\nKorean (949)\nThai (874)\nDOS-USA (437)\nDOS-LATIN1 (850)\nCyrillic KOI8-R (20866)\nAltele (introduceþi codul de paginã manual)"
 6037="Utili&zare parolã generalã pentru protejarea parolelor"
@@ -1802,6 +1821,7 @@ codepage=1250
 6214="Ignorã &liniile redundante"
 
 6215="&Binar"
+; Menu local Comparator prin continut
 6216="Stânga<-->Dreapta"
 6217="Afiºare DOAR diferenþele, cu nr. de linii extra: -->"
 
@@ -1838,7 +1858,7 @@ codepage=1250
 6279="&Tipãrire selecþie… \tCtrl+P"
 6280="Asimetric"
 6281="<-> ªterge fiºierele marcate din AMBELE pãrþi"
-6282="+Foldere&Goale"
+6282="+Foldere &Goale"
 6283="Copiazã doar proprietãþile fiºierului --> (stânga spre dreapta)…\tCtrl+Alt+L"
 6284="Copiazã doar proprietãþile fiºierului <-- (dreapta spre stânga)…\tCtrl+Alt+R"
 {}
@@ -1885,7 +1905,7 @@ codepage=1250
 6608=" EXTENSIE fiºier "
 6609="[E] Ext."
 6610="[E#-#] Fragment"
-6611="Nemodificat\ntoate cu minuscule\nTOATE CU MAJUSCULE\nPrima literã cu majusculã\nCapitalizat Fiecare Cuvânt"
+6611="Nemodificat\ntoate cu minuscule\nTOATE CU MAJUSCULE\nPrima literã cu majusculã\nCapitalizare Cuvinte"
 6612=" Cau&tã ºi înlocuieºte (*,?)"
 6613="Cautã:"
 6614="Înlocuieºte cu:"
@@ -1975,7 +1995,7 @@ codepage=1250
 7501="Alegeþi codarea"
 7502="Stânga:\n&ANSI (text simplu)\n&Unicod (UTF-16)\nUnicod &MacOS\nUTF-&8"
 7503="Dreapta:\nA&NSI (text simplu)\nUn&icod (UTF-16)\nUnicod Ma&cOS\nUT&F-8"
-
+;TC8.5
 7601="Selectare fiºiere duplicat"
 7602="Fiºiere\nSelectare dupã Foldere"
 7603="Selectare dupã nume/extensie:"
@@ -1999,6 +2019,7 @@ codepage=1250
 7621="Cel mai recent\nCel mai vechi\nCel mai mare\nCel mai mic\nPrimul din grup\nUltimul din grup"
 7622="Primul din grup\nUltimul din grup"
 
+;TC 9.0
 7701="Setare proprietãþi modul"
 7702="&Modulul:"
 7703="P&roprietãþi:"
@@ -2020,7 +2041,7 @@ codepage=1250
 7800="Configurare stiluri personalizate de vizualizare"
 7801="&Adãugare..."
 7802="&Eliminare..."
-7803="Redenumire &titlu stil..."
+7803="Redenumire s&til..."
 7804="C&oloane afiºate:"
 7805="Ordo&nare dupã:"
 7806="&Descendent"

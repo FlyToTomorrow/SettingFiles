@@ -499,6 +499,11 @@ codepage=1250
 1391="Nie odebrano danych! Kabel jest uszkodzony lub pod³¹czony do niew³aœciwego portu."
 1392="Port jest ju¿ u¿ywany!"
 1393="Nie mogê otworzyæ portu do wy³¹cznego u¿ytku!"
+1394="Z aktywnego panelu (Ÿród³owego)"
+1395="Z docelowego"
+1396="Nieprawid³owe dane!"
+1397="Angielski w Tytu³ach"
+1398="Wyszukiwany tekst jest zbyt d³ugi!"
 
 1400="Stara nazwa;Roz.;Nowa nazwa;Wielkoœæ;Data;Lokalizacja"
 1401="B³¹d w tekœcie definicji!"
@@ -519,7 +524,7 @@ codepage=1250
 1420="Definiuj nowy..."
 1430="WprowadŸ has³o ponownie celem weryfikacji!"
 1431="Zapisz katalog docelowy w pliku listy"
-1432="Minut"
+1432="Minuta(y)"
 1433="Drukuj zawartoœæ katalogu"
 1434="Liczba poziomów w katalogu (-1=wszystkie)"
 1435=" k w "
@@ -941,6 +946,7 @@ codepage=1250
 2047="Utwórz oddzielne pliki sum kontrolnych dla ka¿dego &folderu"
 2048="Ten napêd jest prawdopodobnie zablokowany przez BitLockera! Czy odblokowaæ go?"
 2049="Podaj has³o BitLockera!"
+2050="Rozmiary folderów nie s¹ indeksowane! Musisz w³¹czyæ tê funkcjê w ustawieniach narzêdzia 'Everything'."
 
 {COMMON}
 4001="OK"
@@ -987,6 +993,7 @@ codepage=1250
 
 {BUTTONCHANGEDLG /oneBUTTONCHANGEDLG}
 5061="Edytuj pasek przycisków"
+5062="Edytuj przycisk"
 5064="St&yl XP"
 5065="&Pasek przyc.:"
 5066="W&ielkoœæ"
@@ -1429,7 +1436,7 @@ codepage=1250
 5627="&Ukryty"
 5628="Syste&mowy"
 5629="Katal&og"
-5630="godzina(y)\ndzieñ(i)\ntydzieñ(nie)\nmiesi¹c(e)\nrok"
+5630="godzina(y)\ndzieñ(i)\ntydzieñ(nie)\nmiesi¹c(e)\nrok(lata)"
 5631="ZnajdŸ &zdublowane pliki"
 5632="i&dentyczna zawartoœæ"
 5633="identyczna nazwa (&1)"
@@ -1683,6 +1690,7 @@ codepage=1250
 6031="&Bajtów na plik"
 6032="&Usuñ pliki na dysku docelowym (tylko dyski wymienne)"
 
+6034="&Certyfikat klienta:"
 6035="Kodowan&ie nazw plików:"
 6036="Autodetekcja (UTF-8 je¿eli mo¿liwe)\nANSI (lokalna strona kodowa)\nASCII/DOS (lokalna strona kodowa)\nUTF-8"
 6037="&U¿yj has³a g³ównego dla zabezpieczenia has³a"
@@ -1980,7 +1988,7 @@ codepage=1250
 7605="Wybierz wg da&ty/czasu:"
 7606="Zaznacz wg ro&zmiaru pliku:"
 7607="Pozostaw bez zaznaczenia przynajmniej j&eden plik w ka¿dej z grup:"
-7608="Uwaga: To mo¿e usun¹æ zaznaczenie z wczeœniej wybranych plików"
+7608="Uwaga: mo¿e to usun¹æ zaznaczenie z wczeœniej wybranych plików"
 7609="Wybierz foldery, w których pliki mog¹ byæ zazna&czone:"
 7610="Zaznacz te¿ wszystkie &podfoldery (rêcznie i wed³ug wzorca)"
 7611="Zaznacz foldery wed³ug wzo&rca:"

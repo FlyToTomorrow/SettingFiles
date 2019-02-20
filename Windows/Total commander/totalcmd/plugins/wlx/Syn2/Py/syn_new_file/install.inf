@@ -1,0 +1,10 @@
+[info]
+title=New File
+desc=Makes new file by template from dir "data/newdoc"
+type=py-plugin
+subdir=syn_new_file
+
+[ini1]
+section=Commands
+id=New File
+params=menu

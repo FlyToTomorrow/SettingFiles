@@ -40,6 +40,7 @@ SHIFT+F4               Create new text file and load into editor
 SHIFT+F5               Copy files (with rename) in the same directory
 SHIFT+CTRL+F5          Create shortcut of files in target directory
 SHIFT+F6               Rename files in the same directory
+SHIFT+F7               Create directory in other panel, using name under cursor
 SHIFT+F8/DEL           Delete directly / delete to recycle bin - according to configuration
 SHIFT+F10              Show context menu
 SHIFT+ESC              Iconize Wincmd

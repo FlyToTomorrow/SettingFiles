@@ -90,6 +90,7 @@ cm_CopySamepanel=3100;Copy within panel
 cm_CopyOtherpanel=3101;Copy to other
 cm_RenMov=906;Rename/Move files
 cm_MkDir=907;Make directory
+cm_MkDirOther=911;Make directory in target panel
 cm_Delete=908;Delete files
 cm_TestArchive=518;Test selected archives
 cm_PackFiles=508;Pack files

@@ -1,0 +1,8 @@
+name=refactoring: if-else over selection
+id=
+lex=Python
+text=
+if ${1:?}:
+	${sel}
+else:
+	${2:pass}	

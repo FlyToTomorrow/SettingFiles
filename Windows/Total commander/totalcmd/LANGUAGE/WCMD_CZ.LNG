@@ -13,7 +13,7 @@ codepage=1250
 10="Opravdu chcete z archivu odstranit vybrané soubory (celkem %i)?"
 11="Složka %s není prázdná.\rOpravdu ji chcete odstranit vèetnì všech souborù a podsložek?"
 12="Cíl již existuje:\r%s\rChcete ho pøepsat?"
-13="&Pøepsat;Pøepsat &vše;Pøe&skoèit\tS&torno;Pøepsat pouze sta&rší;Pøeskoèit vš&e"
+13="&Pøepsat;Pøepsat &vše;Pøe&skoèit\tS&torno;Pøepsat pouze sta&rší;Pøes&koèit vše"
 14="Akce byla zrušena uživatelem."
 15="Pø&eskoèit;S&torno"
 16="Urèete typ souborù (napø. *.txt nebo regulární výraz se znakem '<' na zaèátku), napø.: <(a|b)"
@@ -28,7 +28,7 @@ codepage=1250
 25="&Miniatury"
 26="Vlastní sl&oupce"
 27="&Jako správce"
-28="&Vše jako správce"
+28="Vše j&ako správce"
 32="Cesta nebyla nalezena."
 33=" [Nebyly nalezeny žádné soubory]"
 34=" [Poèet nalezených souborù: %i   Poèet nalezených složek: %i]"
@@ -496,6 +496,11 @@ codepage=1250
 1391="Žádná data nebyla pøijata. Buï máte špatný kabel nebo je pøipojen ke špatnému portu."
 1392="Port je již používán jinou aplikací."
 1393="Port nelze uzamknout pro výhradní pøístup."
+1394="V aktivním panelu (zdroj)"
+1395="V cílovém panelu"
+1396="Neplatné zadání!"
+1397="anglické názvy"
+1398="Hledaný text je pøíliš dlouhý!"
 
 1400="Pùvodní název;Pøípona;Nový název;Velikost;Datum;Umístìní"
 1401="Definièní øetìzec je chybný."
@@ -759,7 +764,7 @@ codepage=1250
 1704="&Pøevést;Pøevést &vše;&Storno\tPø&eskoèit;Pøes&koèit vše\tPøej&menovat;Pøejmen&ovat vše"
 1705="Zdrojový soubor obsahuje znaky v kódování Unicode (dokonce i alternativní název pro systém DOS), takže pøístup není možný. Chcete pokraèovat s dalším souborem?"
 1706="Upozornìní: Pokoušíte se komprimovat jeden nebo více souborù s názvy v kódování Unicode z rùzných znakových stránek.\nVìtšina ostatních archivátorù ZIP (napø. program Prùzkumník) nedokáže takové názvy extrahovat."
-1707="&Uložit tyto názvy v kódování UTF-8 Unicode;Uložit &VŠECHNY názvy v kódování UTF-8 Unicode\tUložit tyto názvy ve &zvláštním poli;Uložit všechny názvy s &diakritikou ve zvláštním poli\tUložit znaky mimo tabulku A&NSI se znaèkou otazníku;Pøerušit &komprimaci"
+1707="&Uložit tyto názvy v kódování UTF-8 Unicode;Uložit &VŠECHNY názvy v kódování UTF-8 Unicode\tUložit tyto názvy ve &zvláštním poli;Uložit všechny názvy s &diakritikou ve zvláštním poli\tUložit znaky mimo tabulku A&NSI jako otazníky;Pøerušit &komprimaci"
 1708="Tato funkce nepodporuje znaky v kódování Unicode."
 1709="Není podporováno"
 1710="&Pøeskoèit;Pøeskoèit &vše\tPø&erušit"
@@ -948,6 +953,7 @@ codepage=1250
 2047="Pro každou s&ložku vytvoøit samostatný soubor kontroly dat"
 2048="Tato jednotka je zøejmì uzamèena nástrojem Bitlocker! Chcete ji odemknout?"
 2049="Zadejte heslo nástroje Bitlocker!"
+2050="Velikosti složek nejsou indexovány! Bude nutné tuto možnost povolit v nastavení programu 'Everything'."
 
 {COMMON}
 4001="OK"
@@ -969,6 +975,7 @@ codepage=1250
 5026="&Všechny soubory s pøíponou:"
 5027="Pøidružit &k programu:"
 5028="&Upravit typ..."
+5029="&Nahradit za"
 
 {ATTRIBDLG}
 5041="Zmìna atributù"
@@ -993,6 +1000,7 @@ codepage=1250
 
 {BUTTONCHANGEDLG /oneBUTTONCHANGEDLG}
 5061="Zmìna tlaèítkové lišty"
+5062="Zmìna jednoho tlaèítka"
 5064="St&yl Windows XP"
 5065="&Tlaèítková lišta:"
 5066="Ve&likost ikon:"
@@ -1687,6 +1695,7 @@ codepage=1250
 6032="Od&stranit soubory na cílovém disku (pouze vymìnitelné disky)"
 
 {Connection details (continued)}
+6034="Klientský &certifikát:"
 6035="Kódování názvù souborù:"
 6036="Rozpoznat (UTF-8, je-li k dispozici)\nANSI (místní znaková stránka)\nASCII/DOS (místní znaková stránka)\nUTF-8"
 6037="K o&chranì hesla použít hlavní heslo"

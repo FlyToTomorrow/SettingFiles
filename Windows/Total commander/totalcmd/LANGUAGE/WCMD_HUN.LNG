@@ -497,6 +497,11 @@ codepage=1250
 1391="Nem érkezik adat! Lehet, hogy rossz kábelt használsz, vagy rossz portra csatlakoztattad."
 1392="A port már használatban van!"
 1393="Nem tudom a portot kizárólagosan lefoglalni!"
+1394="Az aktív panelrõl (forrás)"
+1395="A célpanelrõl"
+1396="Érvénytelen adat!"
+1397="Angol címek"
+1398="Túl hosszû a keresett szöveg!"
 
 1400="Régi név;Kit.;Új név;Méret;Dátum;Hely"
 1401="Hiba a meghatározásban!"
@@ -952,6 +957,7 @@ codepage=1250
 2047="Külön ellenõrzõ fájl létrehozása min&den mappában"
 2048="Ez a meghajtó Bitlocker-el le van zárva! Feloldjam?"
 2049="Add meg Bitlocker jelszót!"
+2050="A mappa mérete nincs indexelve. Engedélyezned kell az 'Everything' beállításában."
 
 4001="OK"
 4002="Mégse"
@@ -994,6 +1000,7 @@ codepage=1250
 5060="Futtatás"
 
 5061="Eszköztár módosítása"
+5062="Gomb módosítása"
 5064="XP st&ílus"
 5065="&Eszköztár:"
 5066="Mé&ret:"
@@ -1675,6 +1682,7 @@ codepage=1250
 6031="&bájt fájlonként:"
 6032="Fájlok &törlése a céllemezen (csak cserélhetõ lemezeknél)"
 
+6034="&Ügyféltanúsítvány:"
 6035="Fáj&lnevek kódolása:"
 6036="Automatikus (UTF-8 ha lehet)\nANSI (helyi kódlap)\nASCII/DOS (helyi kódlap)\nUTF-8"
 6037="Meste&rjelszó használata a jelszavak védelmére"

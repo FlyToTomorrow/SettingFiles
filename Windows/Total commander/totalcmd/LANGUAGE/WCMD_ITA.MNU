@@ -11,8 +11,8 @@ POPUP "&File"
   MENUITEM "Strumento multi ri&nomina...\t<Ctrl>+M", 2400
   MENUITEM "Modi&fica commenti...\t<Ctrl>+Z", 2700
   POPUP "S&tampa"
-    MENUITEM "&Lista file...", 2027
-    MENUITEM "Lista file e &sotto cartelle...", 2028
+    MENUITEM "E&lenco file...", 2027
+    MENUITEM "Elenco file e &sotto cartelle...", 2028
     MENUITEM "Con&tenuti file\t<Ctrl>+<F9>", cm_PrintFile
   END_POPUP
   MENUITEM SEPARATOR
@@ -36,7 +36,7 @@ POPUP "&Selezione"
   MENUITEM SEPARATOR
   MENUITEM "Sa&lva selezione", 530
   MENUITEM "&Ripristina selezione\t<BlocNum> /", 529
-  MENUITEM "Sal&va selezione su file", 2031
+  MENUITEM "Sal&va selezione nel file", 2031
   MENUITEM "C&arica selezione da file", 2032
   MENUITEM SEPARATOR
   MENUITEM "Copia sele&zione negli Appunti", 2017
@@ -84,16 +84,16 @@ POPUP "&Rete"
 END_POPUP
 
 POPUP "&Visualizza"
-  MENUITEM "&Breve\t<Ctrl>+<F1>", cm_srcshort
-  MENUITEM "&Completa\t<Ctrl>+<F2>", cm_srclong
+  MENUITEM "Elenco &breve\t<Ctrl>+<F1>", cm_srcshort
+  MENUITEM "Elenco &completo\t<Ctrl>+<F2>", cm_srclong
   MENUITEM "Commen&ti\t<Ctrl>+<Maiusc>+<F2>", 300
   MENUITEM "Colonne &personalizzate\t<Maiusc>+<F1>", 270
   MENUITEM "Personalizza modi visualizzazione", 333
   MENUITEM "St&ruttura\t<Ctrl>+<F8>", cm_srcTree
   POPUP "Pannello struttura\t<Ctrl>+<Maiusc>+<F8>"
-    MENUITEM "&0 (nessuno)", 3200
-    MENUITEM "&1 (uno per entrambi i pannelli)", 3201
-    MENUITEM "&2 (due, uno per ogni pannello)", 3202
+  MENUITEM "&0 (nessuno)", 3200
+  MENUITEM "&1 (uno per entrambi i pannelli)", 3201
+  MENUITEM "&2 (due, uno per ogni pannello)", 3202
   END_POPUP
   MENUITEM "&Anteprime\t<Ctrl>+<Maiusc>+<F1>", 269
   MENUITEM "&Vista rapida\t<Ctrl>+Q", 304
@@ -117,8 +117,8 @@ POPUP "&Visualizza"
   MENUITEM "Ri&leggi sorgente\t<Ctrl>+R", cm_rereadsource
 END_POPUP
 
-POPUP "C&onfigurazione"
-  MENUITEM "O&pzioni", cm_config
+POPUP "Imp&ostazioni"
+  MENUITEM "Im&postazioni programma", cm_config
   MENUITEM "Modifica &barra pulsanti", cm_ButtonConfig
   MENUITEM "Barra pulsanti &2 (verticale)...", 583
   MENUITEM "&Modifica diretta file impostazioni...", 581

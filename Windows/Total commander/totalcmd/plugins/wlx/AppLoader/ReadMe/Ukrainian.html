@@ -1,0 +1,551 @@
+﻿<html>
+<head>
+	<link href="css/main.css" rel="stylesheet" type="text/css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>M'sS AppLoader&nbsp;&ndash; Довідка</title>
+</head>
+<body bgcolor="#F8F8FF">
+<font face="arial">
+<span class="mainhead"><center>AppLoader 0.9.6.3</center></span>
+<center>Завантажувач застосунків</center>
+<center>Плаґін внутрішнього переглядача для Total Commander (x32, x64)</center>
+<center>&copy; <span class="mss">M</span>aximus<span class="mss">'s</span> <span class="mss">S</span>olutions 2006-2014</center>
+<center><a href="http://maximus.in.ua" target="_blank">http://maximus.in.ua</a></center>
+<center><a href="mailto:support@maximus.in.ua" class="email">support@maximus.in.ua</a> <a href="mailto:mxmus@rambler.ru" class="email">mxmus@rambler.ru</a></center>
+<br />
+
+<hr width="95%" size="1" noshade>
+<span class="head"><center>Зміст</center></span>
+<div style="margin-left: 60px; font-size: 10pt;">
+	<a href="#description" class="local"><b>Опис</b></a><br />
+	<a href="#install" class="local"><b>Встановлення</b></a><br />
+	<a href="#using" class="local"><b>Приклади зручного використання</b></a><br />
+	<a href="#limit" class="local"><b>Обмеження</b></a><br />
+	<a href="#config" class="local"><b>Налаштування</b></a><br />
+	<a href="#history" class="local"><b>Історія версій</b></a>
+</div>
+<br />
+
+<hr width="95%" size="1" noshade>
+<a name="description" /><span class="head"><center>Опис</center></span>
+
+<div class="paragraph">Плаґін дозволяє відкривати вибрані файли за допомогою асоційованих застосунків у тих випадках, коли є можливість скористатися внутрішнім переглядачем (Lister).</div>
+<div class="paragraph">Головною особливістю цього плаґіна є здатність відкрити файл в будь-якому застосунку з таких модальних вікон Total Commander як «Пошук файлів» та «Синхронізація каталогів», а також в Діалозі підтвердження перезапису, чого не можна здійснити ніякими іншими засобами.</div>
+<div class="paragraph">Не менш приємною є надавана плаґіном можливість запуску асоційованого застосунку за допомогою гарячої клавіші для вже відкритого у внутрішньому переглядачі файлу.</div>
+<div class="paragraph">Окрім того плаґін може працювати з виділеними файлами, має можливості гнучкого налаштування умов спрацьовування, а також функцію вимкнення клавішею Scroll Lock.</div>
+
+<br />
+
+<hr width="95%" size="1" noshade>
+<a name="install" /><span class="head"><center>Встановлення</center></span>
+<div class="paragraph"><span class="subhead">Автоматичне</span></div>
+<ol class="list">
+	<li>Увійдіть до архіву з плаґіном (<span class="key">Ctrl+PgDn</span>) і Total Commander запропонує встановити його</li>
+	<li>Дотримуйтеся вказівок Total Commander</li>
+</ol>
+<div class="paragraph"><span class="subhead">Ручне</span></div>
+<ol class="list">
+	<li>Розпакуйте вміст архіву до окремого каталогу</li>
+	<li>Підключіть плаґін:</li>
+		<ul type="circle">
+			<li>{Конфігурація → Налаштування... → Плаґіни → Плаґіни файлової системи → Налаштування}</li>
+			<li>Додайте AppLoader.wlx (AppLoader.wlx64) до списку плаґінів</li>
+		</ul>
+	<li>Розташуйте AppLoader на першому місці у списку плаґінів</li>
+</ol>
+
+
+<hr width="95%" size="1" noshade>
+<a name="using" /><span class="head"><center>Приклади зручного використання</center></span>
+<ul class="list">
+	<li>Використання в модальних вікнах.<br />
+	Більше не потрібно запускати іншу копію Total Commander, якщо виникає потреба, наприклад, відкрити документ в Microsoft Word або відтворити відеоролик за допомогою зручного плеєра в діалогах «Пошук файлів», «Синхронізація каталогів» або Діалозі підтвердження перезапису. Просто налаштуйте асоціації для зручних вам застосунків.</li>
+	<li>Використання для відкриття файлів з FTP-серверів та WFX-плаґінів.<br />
+	Більше не потрібно попередньо копіювати архів на локальний диск для того, щоб переглянути або видобути його вміст. Просто налаштуйте асоціації для зручного вам архіватора.</li>
+	<li>Робота з виділеними файлами.<br />
+	Потрібно відкрити групу файлов в окремих вкладках текстового редактора або роздрукувати їх одним рухом? Просто виберіть підходящий застосунок і правильно налаштуйте асоціації та параметри командного рядка.</li>
+	<li>Асоціація застосунка з папками.<br />
+	Хочете відкрити в програвачі увесь сезон улюбленого серіалу? Упевніться, що ваш програвач вміє працювати з папками і налаштуйте асоціації.</li>
+	<li>Запуск застосунків для вже відкритого в Lister файлу.<br />
+	Переглянули файл в Lister і зрозуміли, що потрібно його редагувати? Просто призначте гарячу клавішу для запуску асоційованого застосунку і не забудьте нею скористатися :)</li>
+	<li>Копіювання шуканого тексту до буфера.<br />
+	Вже оцінили належним чином всі можливості плаґіна і на повну використовуєте його в діалозі «Пошук файлів»? Тоді ця функція для вас. Якщо ви шукали файли з використанням опції «З текстом», плаґін автоматично скопіює шуканий текст до буфера, щоб ви його потім могли вставити вже у діалозі пошуку асоційованого застосунка.</li>
+</ul>
+
+<hr width="95%" size="1" noshade>
+<a name="limit" /><span class="head"><center>Обмеження</center></span>
+<ul class="list">
+	<li>Працездатність всіх заявлених функцій може бути гарантована тільки для фінальних версій Total Commander 8.0, 8.01, бета-версії 8.5b15. Для попередніх версій ймовірна значна втрата функціоналу, для наступних&nbsp;&ndash; втрата функціоналу також не виключається.</li>
+	<li>Запуск асоційованих застосунків буде виконуватися поза вікном Lister (як при звичайному, так і при швидкому перегляді).</li>
+	<li>При спрацьовуванні плаґіна в архіві/FTP-сервері/WFX-плаґіні, у зв'язку з особливостями поведінки Total Commander, виділення не може бути опрацьоване повністю і буде опрацьовано тільки перший виділений файл.</li>
+</ul>
+
+<hr width="95%" size="1" noshade>
+<a name="config" /><span class="head"><center>Налаштування</center></span>
+
+<div class="paragraph">Налаштування плаґіна виконується шляхом редагування файлу AppLoader.ini, який повинен знаходитися в папці встановлення плаґіна. Створіть цей файл вручну або скопіюйте з папки IniSample. Якщо цей файл не буде знайдено при завантаженні плаґіна у пам'ять, його буде скопійовано з папки IniSample автоматично.</div>
+<div class="paragraph">Далі приведено ключі файлу налаштувань з описами. Значення ключа, вказане після знака '=', є значенням за замовчуванням, тобто значенням, яке буде використовуватися, якщо ключ відсутній у файлі.</div>
+<br />
+
+<table bgcolor="#FCFCFF" width="95%" border="1" cellspacing="0" cellpadding="4" align="center" class="tablenormaltext">
+<tr bgcolor="#FFFAF0">
+	<td><b><center>Секція</center></b></td>
+	<td><b><center>Ключ</center></b></td>
+	<td colspan=2><b><center>Опис</center></b></td>
+</tr>
+<tr>
+	<td bgcolor="#F8F8FF" rowspan=20 align="center" valign="top"><b>[Options]</b></td>
+	<td bgcolor="#F8F8FF" colspan=3><center><b>Налаштування поведінки плаґіна</b></center></td>
+</tr>
+<tr>
+	<td>ReadOptionsEveryTime=0</td>
+	<td colspan=2>Визначає, коли будуть зчитуватися налаштування з даної секції:<br />
+		<div class="suboption"><span class="inivalue">0</span>:&nbsp;тільки при завантаженні плаґіна у пам'ять;</div>
+		<div class="suboption"><span class="inivalue">1</span>:&nbsp;при кожному зверненні до плаґіна.</div>
+	</td>
+</tr>
+<tr>
+	<td>ScrollLockControl=0</td>
+	<td colspan=2>Вмикає керування клавішею Scroll Lock:<br />
+		<div class="suboption"><span class="inivalue">0</span>:&nbsp;плаґін увімкнений постійно;</div>
+		<div class="suboption"><span class="inivalue">1</span>:&nbsp;вмикати плаґін клавішею Scroll Lock.</div>
+	</td>
+</tr>
+<tr>
+	<td>ModalOnly=0</td>
+	<td colspan=2>Керує спрацьовуванням плаґіна у залежності від типу вікна:<br />
+		<div class="suboption"><span class="inivalue">1</span>:&nbsp;спрацьовувати тільки в модальних вікнах («Пошук файлів», «Синхронізація каталогів», Діалог підтвердження перезапису);</div>
+		<div class="suboption"><span class="inivalue">0</span>:&nbsp;умови спрацьовування визначаються ключами FindFiles, SyncDirs, TCWindow, QuickView, Lister4, OverWrite.</div>
+	</td>
+</tr>
+<tr>
+	<td>FindFiles=1</td>
+	<td rowspan=7 width=180>При ModalOnly=0, керує спрацьовуванням плаґіна<br />(<span class="inivalue">1</span>:&nbsp;дозволити; <span class="inivalue">0</span>:&nbsp;заборонити)</td>
+	<td>у вікні «Пошук файлів».</td>
+</tr>
+<tr>
+	<td>SyncDirs=1</td>
+	<td>у вікні «Синхронізація каталогів».</td>
+</tr>
+<tr>
+	<td>TCWindow=1</td>
+	<td>в основному вікні Total Commander.</td>
+</tr>
+<tr>
+	<td>QuickView=0</td>
+	<td>при швидкому перегляді.</td>
+</tr>
+<tr>
+	<td>Lister4=0</td>
+	<td>в Lister при активації режиму перегляду з плаґінами (клавіша <span class="key">4</span>) та при переключенні між файлами (клавіші <span class="key">N</span> та <span class="key">P</span>).</td>
+</tr>
+<tr>
+	<td>ListerDirectly=0</td>
+	<td>при запуску Lister без головного вікна Total Commander (тобто з командного рядка з параметром /S=L).</td>
+</tr>
+<tr>
+	<td>OverWrite=1</td>
+	<td>в Діалозі підтвердження перезапису.</td>
+</tr>
+<tr>
+	<td>IfIsExtOnly=0</td>
+	<td colspan=2>Керує спрацьовуванням плаґіна в залежності від розширення файлу:<br />
+		<div class="suboption"><span class="inivalue">1</span>:&nbsp;спрацьовувати тільки для файлів з розширеннями, визначеними в секції Editor файлу AppLoader.ini або в секції Extensions файлу налаштувань Total Commander (див. ключ UseTCExtensions);</div>
+		<div class="suboption"><span class="inivalue">0</span>:&nbsp;спрацьовувати для файлів з будь-якими розширеннями.</div>
+	</td>
+</tr>
+<tr>
+	<td>ListerState=1</td>
+	<td colspan=2>Визначає дію над вікном Lister (в тому числі і в режимі швидкого перегляду) після спрацьовування плаґіна:<br />
+		<div class="suboption"><span class="inivalue">0</span>:&nbsp;залишити відкритим;</div>
+		<div class="suboption"><span class="inivalue">1</span>:&nbsp;якщо файл було видобуто/завантажено з архіву/FTP-сервера/WFX-плаґіна: звичайне вікно Lister&nbsp;&ndash; приховати, вікно швидкого перегляду&nbsp;&ndash; залишити відкритим; в інших випадках&nbsp;&ndash; закрити;</div>
+		<div class="suboption"><span class="inivalue">2</span>:&nbsp;закрити в будь-якому випадку.</div>
+	<span class="note">Примітка</span>: При відкритті в Lister файлу з архіву/FTP-сервера/WFX-плаґіна Total Commander попередньо видобуває/звантажує його до тимчасового каталогу і видаляє відразу ж після закриття вікна Lister. Для того, щоб плаґін міг надавати застосункам можливість працювати з такими файлами, необхідно тримати вікно Lister незакритим. Значення ключа <span class="inivalue">1</span> передбачено спеціально для таких ситуацій&nbsp;&ndash; і файл буде відкрито, і вікно Lister не буде заважати.<br />
+	<span class="note">Примітка</span>: При спрацьовуванні плаґіна безпосередньо у вікні Lister (опція Lister4=1) жодних дій з вікном виконано не буде.
+	</td>
+</tr>
+<tr>
+	<td>NextPlugin=1</td>
+	<td>При ListerState=0</td>
+	<td>Задає поведінку для випадку, коли Lister залишається відкритим після спрацьовування плаґіна:<br />
+		<div class="suboption"><span class="inivalue">1</span>:&nbsp;переключити Lister на наступний підходящий плаґін;</div>
+		<div class="suboption"><span class="inivalue">0</span>:&nbsp;залишати AppLoader в Lister.</div>
+	</td>
+</tr>
+<tr>
+	<td>ParamsMode=1</td>
+	<td colspan=2>Визначає як будуть передаватися застосункам параметри командного рядка (див. <a href="#params_mode" class="local">пояснення та приклади<a>):<br />
+		<div class="suboption"><span class="inivalue">0</span>:&nbsp;Параметри за застосунком. Файли розбиваються на групи у залежності від асоціацій із застосунками. Запускається один екземпляр застосунка на кожну групу. Параметри командного рядка буде взято з секції Editor (ключ&nbsp;&ndash; повне ім'я застосунка).</div>
+		<div class="suboption"><span class="inivalue">1</span>:&nbsp;Параметри за розширенням. Тип запуску визначається ключем ParamsByExtMode.</div>
+</td>
+</tr>
+<tr>
+	<td>ParamsByExtMode=0</td>
+	<td>При ParamsMode=1</td>
+	<td>Визначає як будуть передаватися застосункам параметри командного рядка (див. <a href="#params_mode" class="local">пояснення та приклади<a>):<br />
+		<div class="suboption"><span class="inivalue">0</span>:&nbsp;Файли розбиваються на групи у залежності від асоціацій із застосунками. Запускається один екземпляр застосунка на кожну групу. Параметри командного рядка буде взято з секції Editor (ключ, який містить розширення першого файлу з групи).</div>
+		<div class="suboption"><span class="inivalue">1</span>:&nbsp;Файли розбиваються на групи за розширенням. Запускається один екземпляр застосунка на кожну групу. Параметри командного рядка буде взято з секції Editor (ключ, який містить розширення файлів групи).</div>
+		<div class="suboption"><span class="inivalue">2</span>:&nbsp;Запускається один екземпляр застосунка на кожен файл. Параметри командного рядка буде взято з секції Editor (ключ, який містить розширення файлу).</div>
+	<span class="note">Примітка</span>: Якщо розширення присутнє у декількох ключах, перевага буде надана тому ключу, який містить тільки одне розширення, якщо ж такого ключа немає, то буде використано перший ключ, що містить потрібне розширення.
+	</td>
+</tr>
+<tr>
+	<td>UseTCExtensions=0</td>
+	<td colspan=2>Визначає джерело асоціації застосунків за розширеннями:<br />
+		<div class="suboption"><span class="inivalue">1</span>:&nbsp;секція Extensions у файлі налаштувань Total Commander;</div>
+		<div class="suboption"><span class="inivalue">0</span>:&nbsp;секція Editor у файлі AppLoader.ini.</div>
+</td>
+</tr>
+<tr>
+	<td>CopySearchTextToClip=1</td>
+	<td colspan=2>При спрацьовуванні в діалозі «Пошук файлів» дозволяє копіювати шуканий текст до буфера обміну, якщо позначено опцію пошуку «З текстом»:<br />
+		<div class="suboption"><span class="inivalue">1</span>:&nbsp;увімкнути функцію;</div>
+		<div class="suboption"><span class="inivalue">0</span>:&nbsp;вимкнути функцію.</div>
+	</td>
+</tr>
+<tr>
+	<td>DefaultEditor=notepad</td>
+	<td>При IfIsExtOnly=0</td>
+	<td>Застосунок за замовчуванням. <a href="#name_notes" class="local">Ім'я</a> застосунка, який буде запускатися для тих типів (розширень) файлів, для яких не визначено власний застосунок.
+	</td>
+</tr>
+<tr>
+	<td>DefaultEditor_params=</td>
+	<td>При IfIsExtOnly=0 та ParamsMode=0</td>
+	<td><a href="#params_notes" class="local">Параметри</a> командного рядка для застосунка за замовчуванням, який вказано в ключі DefaultEditor.</td>
+</tr>
+
+
+<tr>
+	<td bgcolor="#F8F8FF" rowspan=6 align="center" valign="top"><b>[Editor]</b></td>
+	<td bgcolor="#F8F8FF" colspan=3><center><b>Імена та параметри командного рядка застосунків</b></center></td>
+</tr>
+<tr>
+	<td>aaa=</td>
+	<td colspan=2><a href="#name_notes" class="local">Ім'я</a> застосунка, асоційованого для файлів з <a href="#ext_notes" class="local">розширенням</a> aaa.</td>
+</tr>
+<tr>
+	<td>bbb,ccc=</td>
+	<td colspan=2><a href="#name_notes" class="local">Ім'я</a> застосунка, асоційованого для файлів з <a href="#ext_notes" class="local">розширеннями</a> bbb та ccc.</td>
+</tr>
+<tr>
+	<td>aaa_params=</td>
+	<td colspan=2><a href="#params_notes" class="local">Параметри</a> командного рядка застосунку, асоційованого для файлів з <a href="#ext_notes" class="local">розширенням</a> aaa.</td>
+</tr>
+<tr>
+	<td>bbb,ccc_params=</td>
+	<td colspan=2><a href="#params_notes" class="local">Параметри</a> командного рядка застосунку, асоційованого для файлів з <a href="#ext_notes" class="local">розширеннями</a> bbb та ccc.</td>
+</tr>
+<tr>
+	<td>FullAppName=</td>
+	<td colspan=2><a href="#params_notes" class="local">Параметри</a> командного рядка застосунку з повним ім'ям FullAppName.</td>
+</tr>
+
+
+<tr>
+	<td bgcolor="#F8F8FF" rowspan=5 align="center" valign="top"><b>[HotKeys]</b></td>
+	<td bgcolor="#F8F8FF" colspan=3>
+		<center><b>Гарячі клавіші</b></center>
+		Див. <a href="KeyCodes.html" target="_blank">список кодів клавіш</a>. Якщо код не вказано, гарячу клавішу не буде призначено. Можна використовувати як десяткові, так і шістнадцяткові значення кодів. Наприклад, <span class="key">F12</span>&nbsp;&ndash; <span class="inivalue">123</span> або <span class="inivalue">0x7B</span>.<br />
+		Допустимі значення модифікаторів:&nbsp;<span class="inivalue">A</span>&nbsp;&ndash; Alt, <span class="inivalue">C</span>&nbsp;&ndash; Control, <span class="inivalue">S</span>&nbsp;&ndash; Shift. Приклад:&nbsp;<span class="inivalue">CAS</span>&nbsp;&ndash; Control+Alt+Shift.
+	</td>
+</tr>
+<tr>
+	<td>AppFromLister_key=</td>
+	<td colspan=2>Код гарячої клавіші (наприклад, <span class="inivalue">123</span>&nbsp;&ndash; <span class="key">F12</span>), яку можна використовувати в Lister для відкриття файлу в асоційованому застосунку.</td>
+</tr>
+<tr>
+	<td>AppFromLister_mod=</td>
+	<td colspan=2>Модифікатор для клавіші, вказаної в ключі AppFromLister_key.</td>
+</tr>
+<tr>
+	<td>DefSysAppFromLister_key=</td>
+	<td colspan=2>Код гарячої клавіші (наприклад, <span class="inivalue">0x78</span>&nbsp;&ndash; <span class="key">F9</span>), яку можна використовувати в Lister для відкриття файлу в асоційованому в ОС застосунку.</td>
+</tr>
+<tr>
+	<td>DefSysAppFromLister_mod=</td>
+	<td colspan=2>Модифікатор для клавіші, вказаної в ключі DefSysAppFromLister_key.</td>
+</tr>
+
+
+<tr>
+	<td bgcolor="#F8F8FF" rowspan=6 align="center" valign="top"><b>[TCPos]</b></td>
+	<td bgcolor="#F8F8FF" colspan=3>
+		<center><b>Позиції елементів інтерфейсу Total Commander</b></center>
+		Використовуються при CopySearchTextToClip=1 для пошуку елементів інтерфейсу за їх розташуванням. Плаґін буде шукати елемент в діапазоні позицій плюс/мінус 5 пікселів від вказаного значення.
+	</td>
+</tr>
+<tr>
+	<td>IsSearchTextLeft=5</td>
+	<td colspan=2 rowspan=2>Позиція верхнього лівого кута опції «З текстом» в діалозі «Пошук файлів» (для Total Commander 8.01x32, 8.50b5x32:&nbsp;<span class="inivalue">5</span>; <span class="inivalue">116</span>, 8.50b5x64:&nbsp;<span class="inivalue">5</span>; <span class="inivalue">114</span>)).</td>
+</tr>
+<tr>
+	<td>IsSearchTextTop=116</td>
+</tr>
+<tr>
+	<td>SearchTextLeft=85</td>
+	<td colspan=2 rowspan=2>Позиція верхнього лівого кута поля «З текстом» в діалозі «Пошук файлів» (для Total Commander 8.01x32, 8.50b5x32, 8.50b5x64:&nbsp;<span class="inivalue">85</span>; <span class="inivalue">114</span>).</td>
+</tr>
+<tr>
+	<td>SearchTextTop=114</td>
+</tr>
+
+</table>
+
+<br />
+
+<a name="name_notes" />
+<div class="paragraph"><span class="note">Примітки щодо імен файлів</span>: Якщо ім'я застосунку є значенням, а не ключем (тобто знаходиться праворуч від знака '='), то в імені можна:</div>
+<ul class="list">
+	<li>використовувати змінні оточення типу %COMMANDER_PATH%</li>
+	<li>використовувати відносні шляхи</li>
+	<li>вказувати ім'я файлу без шляху, якщо виконуваний файл застосунка розташований в каталозі плаґіна, системному каталозі, каталозі Windows або в каталозі, визначеному в системній змінній PATH</li>
+</ul>
+
+<a name="ext_notes" />
+<div class="paragraph"><span class="note">Примітки щодо розширень файлів</span>: Окрім звичайних розширень також можна використовувати спеціальні розширення:</div>
+<ul class="list">
+	<li>розширення <i>:dir</i> для папок (наприклад, <span class="code">htm,html,:dir,xml=C:\Program Files\Opera\opera.exe</span>)</li>
+	<li><i>пусте</i> розширення (наприклад, <span class="code">txt,,ini=notepad</span>, <span class="code">,txt,ini=notepad</span> або <span class="code">=notepad</span>, але не <span class="code">txt,ini,=notepad</span>)</li>
+</ul>
+
+<a name="params_notes" />
+<div class="paragraph"><span class="note">Примітки щодо параметрів командного рядка</span>:</div>
+<ul class="list">
+	<li>При використанні в параметрах імен файлів чинні також примітки, вказані <a href="#name_notes" class="local">вище</a>.</li>
+	<li>
+	Використовуйте спеціальний символ %1 в параметрах командного рядка (ключі секції Editor, ключ DefaultEditor_params секції Options), щоб вказати, куди саме потрібно помістити ім'я (імена) файлу(ів)
+	<table width="95%" border="0" cellspacing="0" cellpadding="4" align="left" class="tablenormaltext" style="margin-left: 25px;">
+	<tr>
+		<td valign="top">Приклад:</td>
+		<td>Для файлу <span class="code">&lt;файл&gt;</span>, що завантажується до застосунку <span class="code">&lt;застосунок&gt;</span>, визначено наступні параметри командного рядка: <span class="code">&lt;параметри_1&gt;</span> %1 <span class="code">&lt;параметри_2&gt;</span>.
+		<br />
+		В результаті буде виконано наступну команду: <span class="code">&lt;застосунок&gt; &lt;параметри_1&gt; &lt;файл&gt; &lt;параметри_2&gt;</span>.
+		</td>
+	</tr>
+	</table>
+	</li>
+</ul>
+<br />
+<br />
+<br />
+
+
+<a name="params_mode" />
+<div class="paragraph"><span class="note">Пояснення з роботи ключів ParamsMode та ParamsByExtMode</span>.</div>
+<div class="paragraph">При спрацюванні плаґіна для одного файлу (тобто з модальних діалогів, Lister або для файлу під курсором в панелі Total Commander) буде виконано запуск тільки одного застосунка. При цьому, якщо ParamsMode=1, то при кожному із значень ParamsByExtMode передавання застосунку параметрів командного рядка буде виконуватися однаково&nbsp;&ndash; як виняток для випадку з одним файлом.</div>
+<div class="paragraph">Якщо ж спрацьовування відбувається з панелі Total Commander, тоді як виділено більше одного файлу, то існує декілька варіантів формування команд для запуску одного або декількох застосунків. Даний приклад ілюструє роботу плаґіна при різних значеннях ключів ParamsMode та ParamsByExtMode.</div>
+
+<div class="paragraph"><i>В активній панелі в папці D:\files\ виділено наступні файли</i>:</div>
+<div class="code" style="margin-left: 30px;">
+	file0.ext0<br />
+	file1.ext0<br />
+	file0.ext1<br />
+	file1.ext1<br />
+	file0.ext2
+</div>
+<div class="paragraph"><i>В секції Editor прописано наступні рядки</i>:</div>
+<div class="code" style="margin-left: 30px;">
+	[Editor]<br />
+	ext1=C:\folder\dir\app0.exe<br />
+	ext0,ext2=D:\path\app1.exe<br />
+	ext1_params=-p1 -p2<br />
+	ext0,ext2_params=/key0<br />
+	ext0_params=/key1<br />
+	C:\folder\dir\app0.exe=-p3<br />
+	D:\path\app1.exe=/key3
+</div>
+<div class="paragraph"><i>Застосунки буде запущено таким чином</i>:</div>
+<div class="paragraph">1.&nbsp;При ParamsMode=0</div>
+<div class="code" style="margin-left: 30px;">
+	"D:\path\app1.exe" "D:\files\file0.ext0" "D:\files\file1.ext0" "D:\files\file0.ext2" /key3<br />
+	"C:\folder\dir\app0.exe" "D:\files\file0.ext1" "D:\files\file1.ext1" -p3
+</div>
+<div class="paragraph">2.&nbsp;При ParamsMode=1, ParamsByExtMode=0</div>
+<div class="code" style="margin-left: 30px;">
+	"D:\path\app1.exe" "D:\files\file0.ext0" "D:\files\file1.ext0" "D:\files\file0.ext2" /key1<br />
+	"C:\folder\dir\app0.exe" "D:\files\file0.ext1" "D:\files\file1.ext1" -p1 -p2
+</div>
+<div class="paragraph">3.&nbsp;При ParamsMode=1, ParamsByExtMode=1</div>
+<div class="code" style="margin-left: 30px;">
+	"D:\path\app1.exe" "D:\files\file0.ext0" "D:\files\file1.ext0" /key1<br />
+	"C:\folder\dir\app0.exe" "D:\files\file0.ext1" "D:\files\file1.ext1" -p1 -p2<br />
+	"D:\path\app1.exe" "D:\files\file0.ext2" /key0
+</div>
+<div class="paragraph">4.&nbsp;При ParamsMode=1, ParamsByExtMode=2</div>
+<div class="code" style="margin-left: 30px;">
+	"D:\path\app1.exe" "D:\files\file0.ext0" /key1<br />
+	"D:\path\app1.exe" "D:\files\file1.ext0" /key1<br />
+	"C:\folder\dir\app0.exe" "D:\files\file0.ext1" -p1 -p2<br />
+	"C:\folder\dir\app0.exe" "D:\files\file1.ext1" -p1 -p2<br />
+	"D:\path\app1.exe" "D:\files\file0.ext2" /key0
+</div>
+<div class="paragraph">Майте на увазі, якщо застосунку при запуску передаються декілька файлів (наприклад, <span class="code">"D:\path\app1.exe" "D:\files\file0.ext0" "D:\files\file1.ext0" "D:\files\file0.ext2"</span>), то всі вони будуть відкриті в ньому тільки у тому випадку, якщо застосунок багатодокументний. У протилежному випадку в застосунку буде відкрито тільки перший файл.</div>
+
+<br />
+<div class="subhead"><center>Налаштування Total Commander</center></div>
+<div class="paragraph">Поведінка AppLoader в деяких випадках може залежати від налаштувань Total Commander, виконаних через його конфігураційний діалог чи конфігураційний файл.</div>
+<br />
+<table bgcolor="#FCFCFF" width="95%" border="1" cellspacing="0" cellpadding="4" align="center" class="tablenormaltext">
+<tr bgcolor="#FFFAF0">
+	<td><b><center>Діалог налаштувань</center></b></td>
+	<td><b><center>Файл налаштувань</center></b></td>
+	<td><b><center>Опис</center></b></td>
+</tr>
+<tr>
+	<td>Сторінка «Правка/Перегляд», опції в групі «Перегляд за F3»</td>
+	<td>Секція [Configuration], ключ Viewertype</td>
+	<td>Використовується плаґіном для визначення поведінки за наявності виділення в файлових панелях Total Commander.</td>
+</tr>
+
+<tr>
+	<td>Сторінка «Правка/Перегляд», кнопка «За типами файлів...»</td>
+	<td>Секція [Extensions]</td>
+	<td>Може бути використана плаґіном для заміни секції Editor власного файлу налаштувань.</td>
+</tr>
+
+<tr>
+	<td>&nbsp;</td>
+	<td>Секція [Configuration], ключ GetTextMode</td>
+	<td>Використовується плаґіном для визначення формату, в якому Total Commander буде повертати список виділених файлів. При значенні ключа 0 плаґін не зможе працювати з виділеними файлами, імена яких містять пробіли.</td>
+</tr>
+</table>
+<br />
+<div class="paragraph">Повний опис цих налаштувань можна знайти у довідковому файлі Total Commander.</div>
+
+<br />
+
+<hr width="95%" size="1" noshade>
+<a name="history" /><span class="head"><center>Історія версій</center></span>
+
+<span class="indent">[0.9.6.3] [12.01.2014]</span>
+<ul type="square" class="list">
+<li>Додано: Підтримка спрацювання плаґіна при запуску внутрішнього переглядача (Lister), діалогів «Пошук файлів» та «Синхронізація каталогів» без головного вікна Total Commander (тобто з командного рядка з параметрами /S=L, /S=F або /S=S).</li>
+<li>Додано: Ключ [Options], ListerDirectly=0: Керує спрацьовуванням плаґіна при запуску Lister без головного вікна Total Commander.</li>
+</ul>
+
+<span class="indent">[0.9.6.2] [07.10.2013]</span>
+<ul type="square" class="list">
+<li>Додано: 64-бітна версія плаґіна.</li>
+<li>Змінено: При пошуку елементів інтерфейсу Total Commander використовується діапазон значень плюс/мінус 5 пікселів від значень вказаних в ключах секції [TCPos].</li>
+</ul>
+
+<span class="indent">[0.9.6.1b] [22.10.2012]</span>
+<ul type="square" class="list">
+<li>Виправлено: Не завжди спрацьовувала асоціація застосунка з пустим розширенням.</li>
+<li>Виправлено: При ReadOptionsEveryTime=0 не працювало відключення плаґіна клавішею ScrollLock у всіх випадках окрім першого спрацьовування.</li>
+<li>Виправлено: При першому спрацьовуванні плаґіна деякі застосунки не переводились на передній план.</li>
+</ul>
+
+<span class="indent">[0.9.6.1a] [23.09.2012]</span>
+<ul type="square" class="list">
+<li>Виправлено: Проблеми при роботі із застосунками, імена яких містять крапку.</li>
+</ul>
+
+<span class="indent">[0.9.6.1] [15.09.2012]</span>
+<ul type="square" class="list">
+<li>Додано: Ключ [Options], DefaultEditor_params: Задає параметри командного рядка застосунка за замовчуванням, використовується при IfIsExtOnly=0 та ParamsMode=0.</li>
+<li>Додано: Підтримка змінних оточення типу %COMMANDER_PATH% також і в параметрах командного рядка.</li>
+<li>Виправлено: Не працювали гарячі клавіші для запуску застосунків з Lister, якщо використовувалося більше одного модифікатора.</li>
+<li>Виправлено: Ключі [Options], ScrollLockControl та ModalOnly: Значення за замовчуванням не відповідали опису в довідковому файлі.</li>
+</ul>
+
+<span class="indent">[0.9.6.0] [07.09.2012]</span>
+<ul type="square" class="list">
+<li>Додано: Підтримка Unicode: Імена файлів, буфер обміну.</li>
+<li>Додано: Секція [Editor]: Спеціальне розширення ":dir" для асоціації папок із застосунками.</li>
+<li>Додано: Ключ [Options], ReadOptionsEveryTime: Якщо значення дорівнює 0 (за замовчуванням), опції будуть зчитуватися тільки при завантаженні плаґіна у пам'ять, інакше&nbsp;&ndash; при кожному зверненні до плаґіна.</li>
+<li>Змінено/Виправлено: Покращено роботу з файлами, які завантажуються з архівів, FTP-серверів та WFX-плаґінів.</li>
+<li>Змінено: При ListerState=1 вікно Lister буде приховане тільки у тому випадку, якщо файл відкривається з архіву, FTP-сервера або WFX-плаґіна (тобто поміщується до тимчасового каталогу Total Commander), інакше вікно буде просто закрите.</li>
+<li>Змінено/Виправлено: Отримання списку виділених файлів виконується з урахуванням ключа файлу налаштувань Total Commander 8.0&nbsp;&ndash; [Configuration], GetTextMode. В попередніх версіях Total Commander обробка виділених файлів виконуватися не буде.</li>
+<li>Змінено/Виправлено: Діалог «Пошук файлів»: Копіювання до буфера шуканого тексту тепер працює (в діалозі змінилося ім'я класу поля з текстом).</li>
+<li>Змінено: Діалог «Пошук файлів»: Копіювання до буфера шуканого тексту не виконується, якщо рядок пустий або його не вдалося отримати.</li>
+<li>Змінено: Шлях активної панелі для роботи з виділеними файлами отримується за допомогою повідомлення WM_COPYDATA.</li>
+<li>Змінено: Файл AppLoaderState.ini більше не використовується.</li>
+</ul>
+
+<span class="indent">[0.9.5.0] [21.06.2009]</span>
+<ul type="square" class="list">
+<li>Змінено: При значенні ключа [Options], ListerState=1 вікно Lister тепер не просто згортається, а повністю приховується.</li>
+<li>Виправлено: Виправлено помилки при роботі з пам'яттю при запуску декількох копій Lister`а.</li>
+</ul>
+
+<span class="indent">[0.9.0.0] [03.04.2008]</span>
+<ul type="square" class="list">
+<li>Додано: Ключ [Options], ListerState: Згортання вікна Lister для забезпечення можливості завантаження файлу застосунком безпосередньо з архіву/FTP-сервера/WFX-плаґіна (ключ [Options], CloseLister більше не використовується).</li>
+<li>Змінено: Ключ [Options], WorkWithSelFiles більше не використовується; замість нього аналізується ключ файлу налаштувань Total Commander [Configuration], Viewertype.</li>
+<li>Змінено: Для прискорення роботи налаштування читаються тільки при першому завантаженні плаґіна у пам'ять, а не при кожному зверненні до нього.</li>
+</ul>
+
+<span class="indent">[0.8.0.0] [15.03.2007]</span>
+<ul type="square" class="list">
+<li>Додано: Можливість в параметрах командного рядка застосунка вказувати місце вставки імені (імен) файлу(ів) за допомогою ключа %1.</li>
+</ul>
+
+<span class="indent">[0.7.5.0] [06.03.2007]</span>
+<ul type="square" class="list">
+<li>Додано: Секція [HotKeys]: Можливість запуску за гарячою клавішею асоційованого в ОС застосунка для відкритого в Lister файлу.</li>
+<li>Виправлено: Виправлено помилки при роботі з гарячими клавішами.</li>
+<li>Виправлено: Вирішено конфлікт файлів/застосунків при роботі з декількома екземплярами Lister.</li>
+</ul>
+
+<span class="indent">[0.7.0.0] [28.12.2006]</span>
+<ul type="square" class="list">
+<li>Додано: Секція [Editor], ключі [Options], ParamsMode та ParamsByExtMode: Гнучке налаштування параметрів командного рядка застосунків.</li>
+<li>Додано: Секція [Editor]: Можливість вказувати розширення через кому в одному рядку.</li>
+<li>Додано: Ключ [Options], WorkWithSelFiles: Вмикає роботу з виділеними файлами.</li>
+<li>Додано: Ключ [Options], OverWrite: Керує спрацьовуванням з Діалогу підтвердження перезапису.</li>
+<li>Додано: Секція [TCPos]: Позиції для знаходження елементів інтерфейсу Total Commander при використанні опції CopySearchTextToClip.</li>
+<li>Додано: Секція [HotKeys]: Можливість запуску за гарячою клавішею асоційованого застосунка для відкритого в Lister файлу.</li>
+</ul>
+
+<span class="indent">[0.6.0.0] [16.10.2006]</span>
+<ul type="square" class="list">
+<li>Додано: Ключ [Options], CopySearchTextToClip: Можливість копіювати до буфера вміст поля «З текстом» при спрацюванні з діалогу «Пошук файлів».</li>
+<li>Додано: Підтримка відносних шляхів в іменах файлів.</li>
+<li>Виправлено: Ключ [Options], CloseLister=1 тепер працює і для швидкого перегляду.</li>
+<li>Виправлено: Lister не закривався при CloseLister=1 та IfIsExtOnly=1.</li>
+<li>Змінено: Тепер плаґін називається «AppLoader».</li>
+</ul>
+
+<span class="indent">[0.5.0.0] [03.10.2006]</span>
+<ul type="square" class="list">
+<li>Додано: Підтримка змінних оточення типу %COMMANDER_PATH%.</li>
+<li>Додано: Ключ [Options], UseTCExtensions: Використання секції Extensions з файлу налаштувань Total Commander.</li>
+<li>Змінено: Замість ключа [Editor], Path тепер використовується ключ [Options], DefaultEditor.</li>
+</ul>
+
+<span class="indent">[0.4.0.0] [20.08.2006]</span>
+<ul type="square" class="list">
+<li>Додано: Ключ [Options], ScrollLockControl.</li>
+<li>Додано: Група ключів в секції [Options] для визначення умов спрацьовування: FindFiles, SyncDirs, TCWindow, QuickView, Lister4.</li>
+<li>Додано: Опис ключів усередині файлу налаштувань.</li>
+<li>Виправлено: Виправлено помилку при спрацьовуванні при швидкому перегляді.</li>
+<li>Виправлено: Виправлено помилку передачі застосунку імені файлу з неправильним розширенням.</li>
+</ul>
+
+<span class="indent">[0.3.0.0] [04.08.2006]</span>
+<ul type="square" class="list">
+<li>Додано: Ключ [Options], IfIsExtOnly.</li>
+<li>Змінено: Використання функції CreateProcess замість WinExec для запуску застосунка.</li>
+<li>Виправлено: Плаґін зациклювався при CloseLister=0 та NextPlugin=1, якщо файл не міг бути відкритий жодним іншим плаґіном.</li>
+</ul>
+
+<span class="indent">[0.2.0.0] [02.08.2006]</span>
+<ul type="square" class="list">
+<li>Додано: Ключ [Options], ModalOnly.</li>
+<li>Додано: Ключ [Options], CloseLister.</li>
+<li>Додано: Ключ [Options], NextPlugin.</li>
+<li>Додано: Асоціація застосунків за розширеннями файлів.</li>
+<li>Додано: DetectString "MULTIMEDIA".</li>
+</ul>
+
+<span class="indent">[0.1.0.0]</span>
+<ul type="square" class="list">
+<li>Перша версія.</li>
+</ul>
+
+</div>
+</font>
+</body>
+</html>

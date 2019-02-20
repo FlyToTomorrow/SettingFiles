@@ -520,6 +520,11 @@ codepage=1252
 1391="Ingen data modtaget! Enten er kablet forkert, eller det er tilsluttet forkert port."
 1392="Porten er allerede i brug!"
 1393="Kunne ikke oprette eksklusiv adgang til port!"
+1394="I aktive panel (kilde) "
+1395="I inaktive panel "
+1396="Ugyldig værdi indtastet!"
+1397="Udelad for Småord"
+1398="Søgetekst for lang!"
 
 1400="Gammelt navn;Type;Nyt navn;Størrelse;Dato;Placering"
 1401="Fejl i definitionsstreng!"
@@ -854,8 +859,8 @@ codepage=1252
 1771=" Valgte linjer - baggrund"
 1772="Uændret"
 1773="Tilføj ny visning"
-1774="modermappe"
-1775="modermappes modermappe"
+1774="Modermappe"
+1775="Modermappes modermappe"
 1776="Navn med type"
 1777="Dato (national indstilling)"
 1778="Tid (national indstilling)"
@@ -967,6 +972,7 @@ codepage=1252
 2047="Dan separat checksumfil for &hver mappe"
 2048="Dette drev lader til at være låst med Bitlocker! Skal det låses op?"
 2049="Angiv Bitlocker adgangskode!"
+2050="Størrelsen af mapper er ikke indekseret! Det er nødvendigt at aktivere dette i opsætningen af 'Everything'  (Tools -> Options -> Indexes -> Index folder size)."
 
 4001="OK"
 4002="Annuller"
@@ -990,7 +996,7 @@ codepage=1252
 
 5041="Ændre attributter"
 5042="A&ktuelle tid"
-5043="Hent fra fil under mark&ør"
+5043=" Hent attributter fra fil under mark&ør "
 
 5045="Medtag filer i &undermapper"
 5046=" Ændre attributter "
@@ -1009,6 +1015,7 @@ codepage=1252
 5059="Skriv"
 5060="Udfør"
 5061="Rediger knappanel"
+5062="Rediger enkelt knap"
 
 5064="&XP-layout"
 5065="Kn&appanel:"
@@ -1667,7 +1674,7 @@ codepage=1252
 
 6011="FTP: tilslutningsoplysninger"
 6012="&Session:"
-6013="&Værtsnavn:"
+6013="&Værtsnavn[:Port]:"
 6014="A&nonym tilslutning (e-mail adresse som adgangskode)"
 6015="&Brugernavn:"
 6016="Server&mappe:"
@@ -1688,6 +1695,7 @@ codepage=1252
 6031="&Bytes pr. fil:"
 6032="&Slet filer på destinations-diskette (kun flytbare enheder)"
 
+6034="Klie&ntcertifikat:"
 6035="Kodnin&g af filnavne:"
 6036="Auto-detekter (UTF-8 hvis muligt)\nANSI (lokal tegntabel)\nASCII/DOS (lokal tegntabel)\nUTF-8"
 6037="Anvend &overordnet adgangskode til at beskytte adgangskoden"
@@ -1803,7 +1811,7 @@ codepage=1252
 
 6251="Synkroniser mapper"
 6252="&Sammenlign"
-6253="S&ynkroniser"
+6253="S&ynkroniser..."
 6254="&Undermapper"
 6255="&Efter indhold"
 6256="&Ignorer dato"

@@ -240,7 +240,7 @@ codepage=1252
 1125="Kann Datei nicht lesen!"
 1126="Kann Datei nicht öffnen!"
 1127="Interner Fehler beim Packen!"
-1129="Kann temporäre Datei nicht erzeugen, bitte setzen Sie die Variable temp in autoexec.bat auf einen gültigen Pfad!"
+1129="Kann temporäre Datei nicht erzeugen, bitte überprüfen Sie die Variable temp in der Systemsteuerung!"
 1130="Eine oder mehrere Dateien konnten nicht gelöscht werden! Wahrscheinlich sind sie schreibgeschützt."
 1131="&Überspringen;&Wiederholen;&Abbrechen"
 1132="Unbekannter Fehler: %i"
@@ -499,6 +499,11 @@ codepage=1252
 1391="Keine Daten empfangen! Entweder haben Sie das falsche Kabel, oder es ist am falschen Port angeschlossen."
 1392="Port ist bereits belegt!"
 1393="Konnte Port nicht für exklusive Benutzung sperren!"
+1394="Vom aktiven Fenster (Quelle)"
+1395="Vom Zielfenster"
+1396="Ungültige Eingabe!"
+1397="Englisch in Überschriften"
+1398="Suchtext zu lang!"
 
 1400="Alter Name;Erw.;Neuer Name;Größe;Datum;Verzeichnis"
 1401="Fehler im Definitionsstring!"
@@ -588,8 +593,10 @@ codepage=1252
 1517="Rechts: &Alle leeren Verzeichnisse löschen"
 1518="Im aktiven Fenster\nIm linken Fenster\nIm rechten Fenster"
 1519="%s / %s in %s / %s Datei(en)"
-1520=" von "
-1521=" frei"
+1520=" frei von "
+1521=""
+;1520=" von "
+;1521=" frei"
 1522=", %s / %s Verzeichnis(sen)"
 1523="Im Zielfenster"
 
@@ -942,6 +949,7 @@ codepage=1252
 2047="Erzeuge separate &Quersummendateien für jedes Verzeichnis"
 2048="Dieses Laufwerk scheint mit Bitlocker verschlüsselt zu sein. Entsperren?"
 2049="Bitte geben Sie das Bitlocker-Passwort ein!"
+2050="Ordnergrößen nicht indiziert! Sie müssen diese Option in den Einstellungen von 'Everything' aktivieren"
 
 4001="OK"
 4002="Abbrechen"
@@ -983,6 +991,7 @@ codepage=1252
 5060="Ausführen"
 
 5061="Buttonbar ändern"
+5062="Einzelnen Button ändern"
 5064="&XP-Stil"
 5065="&Buttonbar:"
 5066="&Größe:"
@@ -1657,6 +1666,7 @@ codepage=1252
 6031="&Bytes pro Datei"
 6032="&Lösche Dateien auf Zieldisk (nur wechselbare Disks!)"
 
+6034="&Client-Zertifikat:"
 6035="Codierung der &Dateinamen:"
 6036="Automatisch (UTF-8 falls möglich)\nANSI (lokale Codeseite)\nASCII/DOS (lokale Codeseite)\nUTF-8"
 6037="Benutze &Hauptpasswort, um das Passwort zu schützen"

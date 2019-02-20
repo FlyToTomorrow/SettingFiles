@@ -70,8 +70,6 @@ codepage=1250
 106="Kopiraj  \042%s\042 v"
 107="Preimenuj/premakni  \042%s\042 v"
 112=Ne morete kopirati/premakniti/ustvariti bližnjice - mape\r[tukaj: %s]\rv njeno podmapo\r["
-
-
 113="!!!"
 114="!!!"
 115="Izbrali ste preveè datotek!"
@@ -501,6 +499,11 @@ codepage=1250
 1391="Noben podatek ni sprejet! Mogoèe imate napaèen kabel, ali pa je prikljuèen na napaèna vrata."
 1392="Vrata so trenutno že v uporabi!"
 1393="Vrat ne morete zakleniti za izkljuèno rabo!"
+1394="Z leve"
+1395="Z desne"
+1396="Neveljaven vnos!"
+1397="Anglešèina v naslovih"
+1398="Iskalno besedilo je predolgo!"
 
 1400="Staro ime;Pod.;Novo ime;Velikost;Datum;Mesto"
 1401="Napaka v vrstici definicije!"
@@ -830,7 +833,6 @@ codepage=1250
 1772="Nespremenjeno"
 1773="Dodaj nov naèin pogleda"
 
-
 1774="Nadrejena mapa"
 1775="Nad nadrejena mapa"
 1776="Ime s konènico"
@@ -844,7 +846,6 @@ codepage=1250
 1784="Oglati oklepaj: zapri"
 1785="Konènica"
 1786="Polna pot+ime"
-
 1787="Izmeri prvi znak od konca"
 1788="izmeri zadnji znak od konca"
 1789="Uporabi [prvi,dolžina] namesto [prvi-zadnji]"
@@ -916,7 +917,6 @@ codepage=1250
 2017="Zapomni si &položaj"
 2018="Prezr&i;&Prezri vse\tPre&klièi"
 2019="Preverjanje"
-
 2020="Iskanje besedila v vtiènikih"
 2021="Vnesite ime za to iskanje:"
 2022="Vtièniki:"
@@ -947,6 +947,7 @@ codepage=1250
 2047="Ustv&ari loèene datoteke kontrolnih vsot za vsako mapo"
 2048="Ta pogon je videti zaklenjen z Bitlockerjem! Naj ga odklenem?"
 2049="Prosimo, vnesite geslo za Bitlocker!"
+2050="Velikost mape ni indeksirana! To funkcijo morate omogoèiti v nastavitvah orodja 'Everything'"
 
 {COMMON}
 4001="Vredu"
@@ -968,6 +969,7 @@ codepage=1250
 5026="Vse datoteke s &konènico:"
 5027="&Združi z:"
 5028="Ur&edi vrsto..."
+5029="Z&amenjaj z:"
 
 {ATTRIBDLG}
 5041="Spremeni atribute"
@@ -992,6 +994,7 @@ codepage=1250
 
 {BUTTONCHANGEDLG /oneBUTTONCHANGEDLG}
 5061="Spremeni orodno vrstico"
+5062="Spremeni posamezen gumb"
 5064="XP &slog"
 5065="Orodna v&rstica:"
 5066="Velikos&t:"
@@ -1686,6 +1689,7 @@ codepage=1250
 6032="&Izbriši datoteke na ciljnem disku (samo izmenljivi diski)"
 
 {Connection details (continued)}
+6034="Naroènikov &certifikat:"
 6035="Ko&diranje imen datotek:"
 6036="Samodejna zaznava (UTF-8 èe je možno)\nANSI (lokalna kodna stran)\nASCII/DOS (lokalna kodna stran)\nUTF-8"
 6037="Za zašèito gesla upo&rabi glavno geslo"
@@ -1781,7 +1785,6 @@ codepage=1250
 6166="&Veè podpravil"
 6167="&Manj podpravil"
 6168="Na&stavi ta naèin:"
-
 6180="Prikaži privze&te ikone map/datotek iz Raziskovalca"
 6181="Prikaži '!' na skriti/si&stemski"
 6182="Zasenèene skrite &datoteke"
@@ -1906,7 +1909,6 @@ codepage=1250
 6628="Na&loži imena iz datoteke..."
 6629="Ur&edi imena..."
 6630="&Nastavi Urejevalnik..."
-
 
 6801="Natisni mapo"
 6802="&Pisava"

@@ -134,7 +134,7 @@ POPUP "&Help"
   MENUITEM "&Index\tF1", cm_HelpIndex
   MENUITEM "&Keyboard", cm_keyboard
   MENUITEM "&Registration Info", cm_register
-  MENUITEM "&Visit Totalcmd's Web Site", 640
+  MENUITEM "&Visit Totalcmd's Website", 640
   MENUITEM "&Check for updates now", 650
   MENUITEM SEPARATOR
   MENUITEM "&About Total Commander...", cm_About

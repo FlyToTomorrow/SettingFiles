@@ -78,7 +78,7 @@ POPUP "&Nät"
   MENUITEM "Anslut med &FTP ...\tCtrl+F", 550
   MENUITEM "&Ny anslutning med FTP ...\tCtrl+N", 551
   MENUITEM "&Koppla ifrån FTP\tCtrl+Skift+F", 552
-  MENUITEM "&Visa gömda filer - FTP", 553
+  MENUITEM "&Visa dolda filer - FTP", 553
   MENUITEM "&Hämta med FTP enligt lista ...", 558
   MENUITEM "P&ORT-anslutning till annan PC ...", 2300
 END_POPUP

@@ -242,7 +242,7 @@ codepage=1252
 1125="Erreur de lecture!"
 1126="Impossible d'ouvrir le fichier!"
 1127="Erreur interne de compression!"
-1129="Ne peut créer un fichier temporaire! Vérifiez la variable TEMP dans autoexec.bat!"
+1129="Impossible de créer un fichier temporaire! Vérifiez la variable TEMP dans le panneau de configuration!"
 1130="Ne peut supprimer un ou plusieurs fichiers - ils sont peut-être en lecture seule!"
 1131="S&auter;&Reprise;A&nnuler"
 1132="Erreur inconnue: %i"
@@ -500,6 +500,11 @@ codepage=1252
 1391=" Aucune donnée reçue! On a encore le mauvais câble, ou il est connecté au mauvais port!"
 1392="Le port est déjà occupé!"
 1393="Ne peut verrouiller le port pour usage exclusif!"
+1394="A partir du panneau courant (source)"
+1395="A partir de la destination"
+1396="Entrée invalide!"
+1397="Anglais dans des titres"
+1398="Le texte de recherche est trop long!"
 ;
 {Outil Renommer}
 1400="Ancien nom; Ext.; Nouveau nom; Taille; Date; Emplacement:"
@@ -959,6 +964,7 @@ codepage=1252
 2047="Créer des fichiers de contrôle de cohérence &distincts pour chaque répertoire"
 2048="Ce disque semble être verrouillé par BitLocker! Devons-nous déverrouiller?"
 2049="S'il vous plaît entrez le mot de passe Bitlocker!"
+2050="La taille des dossiers n'est pas indexée ! Vous devez activer cette option dans les paramètres de 'Everything'
 
 { Commun }
 4001="Confirmer"
@@ -982,6 +988,7 @@ codepage=1252
 5026="Tous les fichiers avec extension:"
 5027="&Associer à :"
 5028="Édit&er type..."
+5029="Remplacer &par :"
 ;
 {ATTRIBDLG}
 ;5040="Depuis un module :"
@@ -1008,6 +1015,7 @@ codepage=1252
 ;
 {BOUTONS}
 5061="Options - Changer la barre de boutons"
+5062="Changer un seul bouton"
 5064="Style &XP"
 5065="&Barre boutons:"
 5066="&Taille du bouton:"
@@ -1745,6 +1753,7 @@ codepage=1252
 ;
 {Connection details (continued)}
 ;Détails connexions (suite)
+6034="&Certificat client:"
 6035="Codage des noms de fichiers :"
 6036="Détect. autom. (UTF-8 si possible)\nANSI (page de code locale)\nASCII¦DOS (page de code locale)\nUTF-8"
 6037="Utiliser un mot de passe p&rincipal pour protéger les autres"

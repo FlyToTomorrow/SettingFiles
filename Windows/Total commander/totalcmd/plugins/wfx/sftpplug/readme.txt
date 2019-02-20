@@ -1,12 +1,13 @@
-New secure ftp plugin version 1.4.2 beta 1 (32 bit+64 bit)
-Copyright (C) 2008-2015 Christian Ghisler, all rights reserved
+New secure ftp plugin version 1.4.2 beta 3 (32 bit+64 bit)
+Copyright (C) 2008-2017 Christian Ghisler, all rights reserved
 
 Installation instructions:
 ==========================
 
-This plugin needs the dlls libeay32.dll, libssh2.dll and zlib1.dll in
-the same directory as the plugin. The two dlls can be found
-in the libcURL package at the following address:
+If you use Windows XP or older, this plugin needs the dlls
+libeay32.dll, libssh2.dll and zlib1.dll in the same directory
+as the plugin. The two dlls can be found in the libcURL
+package at the following address:
 http://curl.haxx.se/download.html
 
 Please scroll down to the section named "Win32 - Generic"
@@ -58,6 +59,14 @@ convert a Putty (*.ppk) key to OpenSSH format:
 
 Revision log:
 =============
+20170323 Release, version 1.4.3 beta 3
+20170323 Added: More error logging, especially for SCP transfers
+20170306 Release, version 1.4.3 beta 2
+20170303 Added: Support for ECDSA (elliptic curve) authentication
+20170303 Added: Include OpenSSH dll not depending on OpenSSL, needs Windows Vista or newer. OpenSSH+OpenSSL still supported for older systems.
+20161111 Release, version 1.4.3 beta 1
+20161111 Added: Set mode how to send command: sftpplug.ini [connectionname] sendcommandmode=0 : 0: send normal, get reply, close channel; 1: like 0, do not close; 2: just send, do not wait for reply
+20161111 Added: Send command line before connecting to SFTP channel: sftpplug.ini [connectionname] sendcommand=some unix command
 20150906 Release, version 1.4.2 (unchanged)
 20150713 Release, version 1.4.2 beta 1
 20150713 Added: Support for SCP only connections, for servers not supporting the SFTP subsystem

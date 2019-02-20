@@ -495,6 +495,11 @@ codepage=1252
 1391="Geen gegevens ontvangen! Of de kabel is verkeerd, of deze is met de verkeerde poort verbonden."
 1392="Poort is al in gebruik!"
 1393="Kon poort niet voor exclusief gebruik reserveren!"
+1394="Van actieve venster (bron)"
+1395="Van doel"
+1396="Invoer ongeldig!"
+1397="Engels in Titels"
+1398="Zoektekst te lang!"
 
 1400="Oude naam;Ext.;Nieuwe naam;Grootte;Datum/tijd;Locatie"
 1401="Fout in definitie-string!"
@@ -935,6 +940,7 @@ codepage=1252
 2047="Aparte checksum-bestanden maken voor elke &directory"
 2048="Deze schijf lijkt versleuteld door Bitlocker! Ontgrendelen?"
 2049="Voer het Bitlocker wachtwoord in!"
+2050="De grootte van directory's is niet geïndexeerd! Deze functie moet nog worden aangezet in de tool 'Everything'."
 
 {COMMON}
 4001="OK"
@@ -956,6 +962,7 @@ codepage=1252
 5026="Alle bestanden met e&xtensie (eindigend op):"
 5027="&Verbinden met:"
 5028="Type b&ewerken..."
+5029="Ve&rvang door:"
 
 {ATTRIBDLG}
 5041="Attributen wijzigen"
@@ -980,6 +987,7 @@ codepage=1252
 
 {BUTTONCHANGEDLG /oneBUTTONCHANGEDLG}
 5061="Werkbalk aanpassen"
+5062="Afzonderlijke knop aanpassen"
 5064="&XP-stijl"
 5065="W&erkbalk:"
 5066="G&rootte:"
@@ -1677,6 +1685,7 @@ codepage=1252
 6032="Bestanden op doelschijf &wissen (alleen verwisselbare schijven)"
 
 {Connection details (continued)}
+6034="C&lient Certificaat:"
 6035="Codering van &bestandsnamen:"
 6036="Auto-Detectie (zo mogelijk UTF-8)\nANSI (lokale code pagina)\nASCII/DOS (lokale code pagina)\nUTF-8"
 6037="Geb&ruik hoofdwachtwoord om het wachtwoord te beveiligen"

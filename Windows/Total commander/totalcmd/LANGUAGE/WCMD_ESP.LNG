@@ -496,6 +496,11 @@ codepage=1252
 1391="¡No se ha recibido nada! O el cable está mal, o no está conectado en el lugar correcto."
 1392="¡Puerto en uso!"
 1393="¡No se puede bloquear el puerto!"
+1394="Desde el panel activo (Origen)"
+1395="Desde Destino"
+1396="¡Entrada inválida!"
+1397="Inglés en Títulos"
+1398="¡Texto de búsqueda demasiado largo!"
 
 1400="Nombre anterior;Ext.;Nuevo nombre;Tamaño;Fecha;Situación"
 1401="¡Error en la definición!"
@@ -945,6 +950,7 @@ codepage=1252
 2047="Crear ficheros de Schecksum para cada &directorio"
 2048="Esta unidad parece estar bloqueada con BitLocker. ¿Desbloquear?"
 2049="Por favor, a continuación,teclee su contraseña de BitLocker."
+2050="¡No hay índice del tamaño de los directorios! Debe activar esta opción en la configuración del programa 'Everything'."
 
 4001="Aceptar"
 4002="Cancelar"
@@ -985,6 +991,7 @@ codepage=1252
 5060="Ejecutar"
 
 5061="Cambiar barra de herramientas"
+5062="Cambiar este botón"
 5064="Estilo &XP"
 5065="&Barra de herramientas:"
 5066="&Tamaño:"
@@ -1649,6 +1656,7 @@ codepage=1252
 6031="&Bytes por fichero"
 6032="&Eliminar ficheros en el disco destino (sólo unidades extraíbles)"
 
+6034="&Certificado Cliente:"
 6035="Nombres de ficheros:"
 6036="Autodetectar (UTF-8 si es posible)\nANSI (codificación local)\nASCII/DOS (codificación local)\nUTF-8"
 6037="Usar la clave maest&ra para proteger la contraseña"

@@ -1,4 +1,4 @@
-;    Meniu actualizat pentru Versiunea TC 9.00
+;    Meniu actualizat pentru Versiunea TC 9.20
 POPUP "&Fiºiere"
   MENUITEM "Schimbare &atribute…", cm_SetAttrib
   MENUITEM "&Comprimare…\tAlt+F5", cm_PackFiles
